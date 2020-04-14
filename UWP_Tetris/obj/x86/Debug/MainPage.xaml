@@ -9,8 +9,8 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button x:ConnectionId='2' x:Name="Start_Button" Content="Begin Playing" Height="91" Width="326" FontSize="50" Margin="523,360,0,0" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="477,181,0,0" Text="Tetris" TextWrapping="Wrap" VerticalAlignment="Top" Height="112" Width="411" FontSize="100" FontWeight="Bold" FontStyle="Italic" TextDecorations="Underline" TextAlignment="Center"/>
+        <Button x:ConnectionId='2' x:Name="Start_Button" Content="Begin Playing" Height="91" Width="326" FontSize="50" Margin="0,360,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,177,0,0" Text="Tetris" TextWrapping="Wrap" VerticalAlignment="Top" Height="112" Width="324" FontSize="100" FontWeight="Bold" FontStyle="Italic" TextDecorations="Underline" TextAlignment="Left"/>
 
     </Grid>
 </Page>
