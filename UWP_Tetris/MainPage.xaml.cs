@@ -26,5 +26,10 @@ namespace UWP_Tetris
         {
             this.InitializeComponent();
         }
+
+        private void Start_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
