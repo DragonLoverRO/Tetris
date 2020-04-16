@@ -43,3 +43,6 @@ C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\obj\x86\Debug\qualifiers.txt.i
 C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885490160000000.json
+C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\bin\x86\Debug\Microsoft.Graphics.Canvas.dll
+C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\bin\x86\Debug\Microsoft.Graphics.Canvas.winmd
+C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\obj\x86\Debug\.winmd_cache\$Microsoft.Graphics.Canvas.winmd_637214678760000000.json

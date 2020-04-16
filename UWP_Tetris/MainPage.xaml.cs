@@ -1,10 +1,12 @@
-﻿using System;
+﻿using Microsoft.Graphics.Canvas.UI.Xaml;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -27,9 +29,11 @@ namespace UWP_Tetris
             this.InitializeComponent();
         }
 
-        private void Start_Button_Click(object sender, RoutedEventArgs e)
+        //Source: https://github.com/microsoft/Win2D
+        void canvasControl_Draw(CanvasControl sender, CanvasDrawEventArgs args)
         {
-
+            args.DrawingSession.DrawEllipse(155, 115, 80, 30, Colors.Pink, 3);
+            args.DrawingSession.DrawText("Tetris!", 100, 100, Colors.Yellow);
         }
     }
 }

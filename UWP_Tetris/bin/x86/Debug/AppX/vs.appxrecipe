@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>FAC2240912CD3D7F77968C9B4F22A681065378460177564599E473A4030DCC68</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>1D36B8CCA80ED9D4A4EA7718A5CC7CCEBF78515FBEDC1CAF7669705D3F332733</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>bb3a3790-a0db-4d46-939e-6fc876f01c8e_1.0.0.0_x86__jbvf3pfmqnfep</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>bb3a3790-a0db-4d46-939e-6fc876f01c8e_jbvf3pfmqnfep!App</RegisteredUserModeAppID>
     <RegisteredPackageID>bb3a3790-a0db-4d46-939e-6fc876f01c8e</RegisteredPackageID>
@@ -30,17 +30,25 @@
     <AppXManifest Include="C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-16T21:25:44.816</Modified>
+      <Modified>2020-04-16T22:10:35.124</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\bin\x86\Debug\UWP_Tetris.exe">
       <PackagePath>entrypoint\UWP_Tetris.exe</PackagePath>
-      <Modified>2020-04-16T21:25:44.480</Modified>
+      <Modified>2020-04-16T22:10:34.626</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.9\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2019-07-22T19:01:14.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\malka\.nuget\packages\win2d.uwp\1.25.0\runtimes\win10-x86\native\Microsoft.Graphics.Canvas.dll">
+      <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
+      <Modified>2020-04-02T23:44:36.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\malka\.nuget\packages\win2d.uwp\1.25.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
+      <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
+      <Modified>2020-04-02T23:44:36.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.18362.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
@@ -86,15 +94,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\bin\x86\Debug\UWP_Tetris.xr.xml">
       <PackagePath>UWP_Tetris.xr.xml</PackagePath>
-      <Modified>2020-04-16T21:25:44.337</Modified>
+      <Modified>2020-04-16T22:08:59.200</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2020-04-16T21:25:44.343</Modified>
+      <Modified>2020-04-16T22:10:34.495</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2020-04-16T21:25:44.343</Modified>
+      <Modified>2020-04-16T22:10:34.495</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -102,11 +110,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2020-04-16T21:25:06.820</Modified>
+      <Modified>2020-04-16T22:10:34.721</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\bin\x86\Debug\Core\UWP_Tetris.exe">
       <PackagePath>UWP_Tetris.exe</PackagePath>
-      <Modified>2020-04-16T21:25:44.813</Modified>
+      <Modified>2020-04-16T22:10:35.121</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
