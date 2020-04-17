@@ -8,12 +8,12 @@
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
-      <RootProperty Name="RequestedTheme" />
       <RootProperty Name="Children" />
     </RootType>
-    <RootType FullName="Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl">
-      <RootProperty Name="ClearColor" />
+    <RootType FullName="Microsoft.Graphics.Canvas.UI.Xaml.CanvasAnimatedControl">
       <RootEvent Name="Draw" />
+      <RootEvent Name="Update" />
+      <RootEvent Name="CreateResources" />
     </RootType>
     <RootType FullName="UWP_Tetris.MainPage" />
   </Roots.RootTypes>

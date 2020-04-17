@@ -8,7 +8,7 @@
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
-    <PackageIdentityName>bb3a3790-a0db-4d46-939e-6fc876f01c8e</PackageIdentityName>
+    <PackageIdentityName>578730e6-8191-4d42-9956-20b6befe05be</PackageIdentityName>
     <PackageIdentityPublisher>CN=malka</PackageIdentityPublisher>
     <IntermediateOutputPath>C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
