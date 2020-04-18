@@ -380,5 +380,13 @@ namespace UWP_Tetris
             piece3.Draw(drawingSession);
             piece4.Draw(drawingSession);
         }
+
+        public void MoveTetrisPiece(int changeIntX)
+        {
+            piece1.x += changeIntX;
+            piece2.x += changeIntX;
+            piece3.x += changeIntX;
+            piece4.x += changeIntX;
+        }
     }
 }

@@ -39,7 +39,6 @@ namespace UWP_Tetris
         private void Canvas_Draw(ICanvasAnimatedControl sender, CanvasAnimatedDrawEventArgs args)
         {
             tetris = new Tetris(args.DrawingSession);
-            tetris.create_T_Piece(args.DrawingSession);
         }
 
         private void Canvas_Update(ICanvasAnimatedControl sender, CanvasAnimatedUpdateEventArgs args)
