@@ -20,8 +20,9 @@ namespace UWP_Tetris
         private TetrisPiece piece3;
         private TetrisPiece piece4;
         private CanvasDrawingSession drawingSession;
+        private Random rnd = new Random();
 
-        public Tetris(CanvasDrawingSession drawingSession)
+        public Tetris()
         {
             LeftWall = new Rectangle
             {
@@ -58,323 +59,290 @@ namespace UWP_Tetris
                 height = 10,
                 color = Colors.White
             };
+        }
 
-            this.drawingSession = drawingSession;
+        public void setPiece()
+        {
+            int CreatePiece = rnd.Next(7);
+
+            if (CreatePiece == 0)
+            {
+                piece1 = new TetrisPiece
+                {
+                    x = 100,
+                    y = 50,
+                    width = 20,
+                    height = 20,
+                    color = Colors.Yellow
+                };
+
+                piece2 = new TetrisPiece
+                {
+                    x = 120,
+                    y = 50,
+                    width = 20,
+                    height = 20,
+                    color = Colors.Yellow
+                };
+
+                piece3 = new TetrisPiece
+                {
+                    x = 100,
+                    y = 70,
+                    width = 20,
+                    height = 20,
+                    color = Colors.Yellow
+                };
+
+                piece4 = new TetrisPiece
+                {
+                    x = 120,
+                    y = 70,
+                    width = 20,
+                    height = 20,
+                    color = Colors.Yellow
+                };
+            }
+            else if (CreatePiece == 1)
+            {
+                piece1 = new TetrisPiece
+                {
+                    x = 100,
+                    y = 50,
+                    width = 20,
+                    height = 20,
+                    color = Colors.Cyan
+                };
+
+                piece2 = new TetrisPiece
+                {
+                    x = 100,
+                    y = 70,
+                    width = 20,
+                    height = 20,
+                    color = Colors.Cyan
+                };
+
+                piece3 = new TetrisPiece
+                {
+                    x = 100,
+                    y = 90,
+                    width = 20,
+                    height = 20,
+                    color = Colors.Cyan
+                };
+
+                piece4 = new TetrisPiece
+                {
+                    x = 100,
+                    y = 110,
+                    width = 20,
+                    height = 20,
+                    color = Colors.Cyan
+                };
+            }
+            else if (CreatePiece == 2)
+            {
+                piece1 = new TetrisPiece
+                {
+                    x = 100,
+                    y = 50,
+                    width = 20,
+                    height = 20,
+                    color = Colors.Red
+                };
+
+                piece2 = new TetrisPiece
+                {
+                    x = 120,
+                    y = 50,
+                    width = 20,
+                    height = 20,
+                    color = Colors.Red
+                };
+
+                piece3 = new TetrisPiece
+                {
+                    x = 100,
+                    y = 70,
+                    width = 20,
+                    height = 20,
+                    color = Colors.Red
+                };
+
+                piece4 = new TetrisPiece
+                {
+                    x = 80,
+                    y = 70,
+                    width = 20,
+                    height = 20,
+                    color = Colors.Red
+                };
+            }
+            else if (CreatePiece == 3)
+            {
+                piece1 = new TetrisPiece
+                {
+                    x = 100,
+                    y = 50,
+                    width = 20,
+                    height = 20,
+                    color = Colors.Green
+                };
+
+                piece2 = new TetrisPiece
+                {
+                    x = 120,
+                    y = 50,
+                    width = 20,
+                    height = 20,
+                    color = Colors.Green
+                };
+
+                piece3 = new TetrisPiece
+                {
+                    x = 120,
+                    y = 70,
+                    width = 20,
+                    height = 20,
+                    color = Colors.Green
+                };
+
+                piece4 = new TetrisPiece
+                {
+                    x = 140,
+                    y = 70,
+                    width = 20,
+                    height = 20,
+                    color = Colors.Green
+                };
+            }
+            else if (CreatePiece == 4)
+            {
+                piece1 = new TetrisPiece
+                {
+                    x = 100,
+                    y = 50,
+                    width = 20,
+                    height = 20,
+                    color = Colors.Orange
+                };
+
+                piece2 = new TetrisPiece
+                {
+                    x = 100,
+                    y = 70,
+                    width = 20,
+                    height = 20,
+                    color = Colors.Orange
+                };
+
+                piece3 = new TetrisPiece
+                {
+                    x = 100,
+                    y = 90,
+                    width = 20,
+                    height = 20,
+                    color = Colors.Orange
+                };
+
+                piece4 = new TetrisPiece
+                {
+                    x = 120,
+                    y = 90,
+                    width = 20,
+                    height = 20,
+                    color = Colors.Orange
+                };
+            }
+            else if (CreatePiece == 5)
+            {
+                piece1 = new TetrisPiece
+                {
+                    x = 100,
+                    y = 50,
+                    width = 20,
+                    height = 20,
+                    color = Colors.Pink
+                };
+
+                piece2 = new TetrisPiece
+                {
+                    x = 100,
+                    y = 70,
+                    width = 20,
+                    height = 20,
+                    color = Colors.Pink
+                };
+
+                piece3 = new TetrisPiece
+                {
+                    x = 100,
+                    y = 90,
+                    width = 20,
+                    height = 20,
+                    color = Colors.Pink
+                };
+
+                piece4 = new TetrisPiece
+                {
+                    x = 80,
+                    y = 90,
+                    width = 20,
+                    height = 20,
+                    color = Colors.Pink
+                };
+            }
+            else if(CreatePiece == 6)
+            {
+                piece1 = new TetrisPiece
+                {
+                    x = 100,
+                    y = 50,
+                    width = 20,
+                    height = 20,
+                    color = Colors.Purple
+                };
+
+                piece2 = new TetrisPiece
+                {
+                    x = 120,
+                    y = 50,
+                    width = 20,
+                    height = 20,
+                    color = Colors.Purple
+                };
+
+                piece3 = new TetrisPiece
+                {
+                    x = 80,
+                    y = 50,
+                    width = 20,
+                    height = 20,
+                    color = Colors.Purple
+                };
+
+                piece4 = new TetrisPiece
+                {
+                    x = 100,
+                    y = 70,
+                    width = 20,
+                    height = 20,
+                    color = Colors.Purple
+                };
+            }
+        }
+
+        public void drawScreen(CanvasDrawingSession drawingSession)
+        {
             LeftWall.Draw(drawingSession);
             RightWall.Draw(drawingSession);
             TopWall.Draw(drawingSession);
             BottomWall.Draw(drawingSession);
         }
 
-        public void create_O_Piece(CanvasDrawingSession drawingSession)
+        public void DrawPiece(CanvasDrawingSession drawingSession)
         {
-            piece1 = new TetrisPiece
-            {
-                x = 100,
-                y = 50,
-                width = 20,
-                height = 20,
-                color = Colors.Yellow
-            };
-
-            piece2 = new TetrisPiece
-            {
-                x = 120,
-                y = 50,
-                width = 20,
-                height = 20,
-                color = Colors.Yellow
-            };
-
-            piece3 = new TetrisPiece
-            {
-                x = 100,
-                y = 70,
-                width = 20,
-                height = 20,
-                color = Colors.Yellow
-            };
-
-            piece4 = new TetrisPiece
-            {
-                x = 120,
-                y = 70,
-                width = 20,
-                height = 20,
-                color = Colors.Yellow
-            };
-
-            this.drawingSession = drawingSession;
-            piece1.Draw(drawingSession);
-            piece2.Draw(drawingSession);
-            piece3.Draw(drawingSession);
-            piece4.Draw(drawingSession);
-        }
-
-        public void create_I_Piece(CanvasDrawingSession drawingSession)
-        {
-            piece1 = new TetrisPiece
-            {
-                x = 100,
-                y = 50,
-                width = 20,
-                height = 20,
-                color = Colors.Cyan
-            };
-
-            piece2 = new TetrisPiece
-            {
-                x = 100,
-                y = 70,
-                width = 20,
-                height = 20,
-                color = Colors.Cyan
-            };
-
-            piece3 = new TetrisPiece
-            {
-                x = 100,
-                y = 90,
-                width = 20,
-                height = 20,
-                color = Colors.Cyan
-            };
-
-            piece4 = new TetrisPiece
-            {
-                x = 100,
-                y = 110,
-                width = 20,
-                height = 20,
-                color = Colors.Cyan
-            };
-
-            this.drawingSession = drawingSession;
-            piece1.Draw(drawingSession);
-            piece2.Draw(drawingSession);
-            piece3.Draw(drawingSession);
-            piece4.Draw(drawingSession);
-        }
-
-        public void create_S_Piece(CanvasDrawingSession drawingSession)
-        {
-            piece1 = new TetrisPiece
-            {
-                x = 100,
-                y = 50,
-                width = 20,
-                height = 20,
-                color = Colors.Red
-            };
-
-            piece2 = new TetrisPiece
-            {
-                x = 120,
-                y = 50,
-                width = 20,
-                height = 20,
-                color = Colors.Red
-            };
-
-            piece3 = new TetrisPiece
-            {
-                x = 100,
-                y = 70,
-                width = 20,
-                height = 20,
-                color = Colors.Red
-            };
-
-            piece4 = new TetrisPiece
-            {
-                x = 80,
-                y = 70,
-                width = 20,
-                height = 20,
-                color = Colors.Red
-            };
-
-            this.drawingSession = drawingSession;
-            piece1.Draw(drawingSession);
-            piece2.Draw(drawingSession);
-            piece3.Draw(drawingSession);
-            piece4.Draw(drawingSession);
-        }
-
-        public void create_Z_Piece(CanvasDrawingSession drawingSession)
-        {
-            piece1 = new TetrisPiece
-            {
-                x = 100,
-                y = 50,
-                width = 20,
-                height = 20,
-                color = Colors.Green
-            };
-
-            piece2 = new TetrisPiece
-            {
-                x = 120,
-                y = 50,
-                width = 20,
-                height = 20,
-                color = Colors.Green
-            };
-
-            piece3 = new TetrisPiece
-            {
-                x = 120,
-                y = 70,
-                width = 20,
-                height = 20,
-                color = Colors.Green
-            };
-
-            piece4 = new TetrisPiece
-            {
-                x = 140,
-                y = 70,
-                width = 20,
-                height = 20,
-                color = Colors.Green
-            };
-
-            this.drawingSession = drawingSession;
-            piece1.Draw(drawingSession);
-            piece2.Draw(drawingSession);
-            piece3.Draw(drawingSession);
-            piece4.Draw(drawingSession);
-        }
-
-        public void create_L_Piece(CanvasDrawingSession drawingSession)
-        {
-            piece1 = new TetrisPiece
-            {
-                x = 100,
-                y = 50,
-                width = 20,
-                height = 20,
-                color = Colors.Orange
-            };
-
-            piece2 = new TetrisPiece
-            {
-                x = 100,
-                y = 70,
-                width = 20,
-                height = 20,
-                color = Colors.Orange
-            };
-
-            piece3 = new TetrisPiece
-            {
-                x = 100,
-                y = 90,
-                width = 20,
-                height = 20,
-                color = Colors.Orange
-            };
-
-            piece4 = new TetrisPiece
-            {
-                x = 120,
-                y = 90,
-                width = 20,
-                height = 20,
-                color = Colors.Orange
-            };
-
-            this.drawingSession = drawingSession;
-            piece1.Draw(drawingSession);
-            piece2.Draw(drawingSession);
-            piece3.Draw(drawingSession);
-            piece4.Draw(drawingSession);
-        }
-
-        public void create_J_Piece(CanvasDrawingSession drawingSession)
-        {
-            piece1 = new TetrisPiece
-            {
-                x = 100,
-                y = 50,
-                width = 20,
-                height = 20,
-                color = Colors.Pink
-            };
-
-            piece2 = new TetrisPiece
-            {
-                x = 100,
-                y = 70,
-                width = 20,
-                height = 20,
-                color = Colors.Pink
-            };
-
-            piece3 = new TetrisPiece
-            {
-                x = 100,
-                y = 90,
-                width = 20,
-                height = 20,
-                color = Colors.Pink
-            };
-
-            piece4 = new TetrisPiece
-            {
-                x = 80,
-                y = 90,
-                width = 20,
-                height = 20,
-                color = Colors.Pink
-            };
-
-            this.drawingSession = drawingSession;
-            piece1.Draw(drawingSession);
-            piece2.Draw(drawingSession);
-            piece3.Draw(drawingSession);
-            piece4.Draw(drawingSession);
-        }
-
-        public void create_T_Piece(CanvasDrawingSession drawingSession)
-        {
-            piece1 = new TetrisPiece
-            {
-                x = 100,
-                y = 50,
-                width = 20,
-                height = 20,
-                color = Colors.Purple
-            };
-
-            piece2 = new TetrisPiece
-            {
-                x = 120,
-                y = 50,
-                width = 20,
-                height = 20,
-                color = Colors.Purple
-            };
-
-            piece3 = new TetrisPiece
-            {
-                x = 80,
-                y = 50,
-                width = 20,
-                height = 20,
-                color = Colors.Purple
-            };
-
-            piece4 = new TetrisPiece
-            {
-                x = 100,
-                y = 70,
-                width = 20,
-                height = 20,
-                color = Colors.Purple
-            };
-
-            this.drawingSession = drawingSession;
             piece1.Draw(drawingSession);
             piece2.Draw(drawingSession);
             piece3.Draw(drawingSession);
@@ -389,4 +357,5 @@ namespace UWP_Tetris
             piece4.x += changeIntX;
         }
     }
+
 }

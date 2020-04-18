@@ -29,6 +29,13 @@ namespace UWP_Tetris
         public MainPage()
         {
             this.InitializeComponent();
+            tetris = new Tetris();
+            createPiece();
+        }
+
+        private void createPiece()
+        {
+            tetris.setPiece();
         }
 
         private void Canvas_CreateResources(CanvasAnimatedControl sender, CanvasCreateResourcesEventArgs args)
@@ -38,7 +45,8 @@ namespace UWP_Tetris
 
         private void Canvas_Draw(ICanvasAnimatedControl sender, CanvasAnimatedDrawEventArgs args)
         {
-            tetris = new Tetris(args.DrawingSession);
+            tetris.DrawPiece(args.DrawingSession);
+            tetris.drawScreen(args.DrawingSession);
         }
 
         private void Canvas_Update(ICanvasAnimatedControl sender, CanvasAnimatedUpdateEventArgs args)
