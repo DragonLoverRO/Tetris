@@ -25,6 +25,7 @@ namespace UWP_Tetris
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        Tetris tetris;
         public MainPage()
         {
             this.InitializeComponent();
@@ -37,9 +38,7 @@ namespace UWP_Tetris
 
         private void Canvas_Draw(ICanvasAnimatedControl sender, CanvasAnimatedDrawEventArgs args)
         {
-            args.DrawingSession.DrawRectangle(10, 40, 10, 700, Colors.Red);
-            args.DrawingSession.DrawRectangle(790, 40, 10, 700, Colors.Red);
-            args.DrawingSession.DrawRectangle(10, 730, 790, 10, Colors.Red);
+            tetris = new Tetris(args.DrawingSession);
         }
 
         private void Canvas_Update(ICanvasAnimatedControl sender, CanvasAnimatedUpdateEventArgs args)
