@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Navigation;
 using Microsoft.Graphics.Canvas.UI.Xaml;
 using Microsoft.Graphics.Canvas.UI;
 using Windows.UI;
+using Windows.UI.Core;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 //sources: https://github.com/EricCharnesky/CIS297-Winter2020/tree/master/PongExample/PongExample
@@ -31,6 +32,20 @@ namespace UWP_Tetris
             this.InitializeComponent();
             tetris = new Tetris();
             createPiece();
+
+            Window.Current.CoreWindow.KeyDown += canvasKeyDown;
+        }
+
+        private void canvasKeyDown(CoreWindow sender, KeyEventArgs args)
+        {
+            if(args.VirtualKey == Windows.System.VirtualKey.Left)
+            {
+                tetris.MoveTetrisPiece(-20);
+            }
+            else if(args.VirtualKey == Windows.System.VirtualKey.Right)
+            {
+                tetris.MoveTetrisPiece(20);
+            }
         }
 
         private void createPiece()
