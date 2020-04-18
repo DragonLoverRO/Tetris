@@ -39,7 +39,7 @@ namespace UWP_Tetris
         {
             args.DrawingSession.DrawRectangle(10, 40, 10, 700, Colors.Red);
             args.DrawingSession.DrawRectangle(790, 40, 10, 700, Colors.Red);
-            args.DrawingSession.DrawRectangle(10, 700, 790, 10, Colors.Red);
+            args.DrawingSession.DrawRectangle(10, 730, 790, 10, Colors.Red);
         }
 
         private void Canvas_Update(ICanvasAnimatedControl sender, CanvasAnimatedUpdateEventArgs args)
