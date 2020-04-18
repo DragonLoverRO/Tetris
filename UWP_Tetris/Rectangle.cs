@@ -4,7 +4,7 @@ using Windows.UI;
 namespace UWP_Tetris
 {
     //source: https://github.com/EricCharnesky/CIS297-Winter2020/tree/master/PongExample
-    public class Wall
+    public class Rectangle
     {
         public int x { get; set; }
         public int y { get; set; }

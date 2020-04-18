@@ -11,10 +11,10 @@ namespace UWP_Tetris
     //source: https://github.com/EricCharnesky/CIS297-Winter2020/tree/master/PongExample
     public class Tetris
     {
-        private Wall LeftWall;
-        private Wall RightWall;
-        private Wall BottomWall;
-        private Wall TopWall;
+        private Rectangle LeftWall;
+        private Rectangle RightWall;
+        private Rectangle BottomWall;
+        private Rectangle TopWall;
         private TetrisPiece O_Block;
         private TetrisPiece I_Block;
         private TetrisPiece S_Block;
@@ -26,7 +26,7 @@ namespace UWP_Tetris
 
         public Tetris(CanvasDrawingSession drawingSession)
         {
-            LeftWall = new Wall
+            LeftWall = new Rectangle
             {
                 x = 10,
                 y = 40,
@@ -35,7 +35,7 @@ namespace UWP_Tetris
                 color = Colors.Red
             };
 
-            RightWall = new Wall
+            RightWall = new Rectangle
             {
                 x = 220,
                 y = 40,
@@ -44,7 +44,7 @@ namespace UWP_Tetris
                 color = Colors.Red
             };
 
-            BottomWall = new Wall
+            BottomWall = new Rectangle
             {
                 x = 10,
                 y = 530,
@@ -53,7 +53,7 @@ namespace UWP_Tetris
                 color = Colors.Red
             };
 
-            TopWall = new Wall
+            TopWall = new Rectangle
             {
                 x = 10,
                 y = 40,
