@@ -7,10 +7,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
     xmlns:canvas="using:Microsoft.Graphics.Canvas.UI.Xaml"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RequestedTheme="Dark">
 
     <Grid>
-        <canvas:CanvasAnimatedControl x:ConnectionId='2' x:Name="canvas"                                                                                    />
+        <canvas:CanvasAnimatedControl x:ConnectionId='2' x:Name="canvas"                                                                                    RequestedTheme="Light" />
     </Grid>
 </Page>
 

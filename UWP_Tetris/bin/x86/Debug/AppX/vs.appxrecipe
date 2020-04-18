@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-18T02:05:48.054</Modified>
+      <Modified>2020-04-18T02:47:14.746</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\bin\x86\Debug\UWP_Tetris.exe">
       <PackagePath>entrypoint\UWP_Tetris.exe</PackagePath>
-      <Modified>2020-04-18T02:05:47.718</Modified>
+      <Modified>2020-04-18T02:47:14.406</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.9\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -94,15 +94,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\bin\x86\Debug\UWP_Tetris.xr.xml">
       <PackagePath>UWP_Tetris.xr.xml</PackagePath>
-      <Modified>2020-04-17T00:07:49.240</Modified>
+      <Modified>2020-04-18T02:29:47.881</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2020-04-18T02:04:51.713</Modified>
+      <Modified>2020-04-18T02:47:14.270</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2020-04-18T02:04:51.714</Modified>
+      <Modified>2020-04-18T02:47:14.270</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -114,7 +114,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\bin\x86\Debug\Core\UWP_Tetris.exe">
       <PackagePath>UWP_Tetris.exe</PackagePath>
-      <Modified>2020-04-18T02:05:48.051</Modified>
+      <Modified>2020-04-18T02:47:14.742</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
