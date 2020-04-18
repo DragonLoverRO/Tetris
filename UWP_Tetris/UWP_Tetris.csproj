@@ -124,6 +124,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tetris.cs" />
+    <Compile Include="TetrisPiece.cs" />
     <Compile Include="Wall.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -15,6 +15,13 @@ namespace UWP_Tetris
         private Wall RightWall;
         private Wall BottomWall;
         private Wall TopWall;
+        private TetrisPiece O_Block;
+        private TetrisPiece I_Block;
+        private TetrisPiece S_Block;
+        private TetrisPiece Z_Block;
+        private TetrisPiece L_Block;
+        private TetrisPiece J_Block;
+        private TetrisPiece T_Block;
         private CanvasDrawingSession drawingSession;
 
         public Tetris(CanvasDrawingSession drawingSession)
