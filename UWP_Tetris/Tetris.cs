@@ -19,8 +19,9 @@ namespace UWP_Tetris
         private TetrisPiece piece2;
         private TetrisPiece piece3;
         private TetrisPiece piece4;
-        private CanvasDrawingSession drawingSession;
         private Random rnd = new Random();
+        private int Rotate = 4;
+        private int CurrentPieceMade;
 
         public Tetris()
         {
@@ -64,7 +65,9 @@ namespace UWP_Tetris
         public void setPiece()
         {
             int CreatePiece = rnd.Next(7);
-
+            Rotate = 4;
+            CurrentPieceMade = CreatePiece;
+            //O piece
             if (CreatePiece == 0)
             {
                 piece1 = new TetrisPiece
@@ -87,7 +90,7 @@ namespace UWP_Tetris
 
                 piece3 = new TetrisPiece
                 {
-                    x = 100,
+                    x = 120,
                     y = 70,
                     width = 20,
                     height = 20,
@@ -96,13 +99,14 @@ namespace UWP_Tetris
 
                 piece4 = new TetrisPiece
                 {
-                    x = 120,
+                    x = 100,
                     y = 70,
                     width = 20,
                     height = 20,
                     color = Colors.Yellow
                 };
             }
+            //I Piece
             else if (CreatePiece == 1)
             {
                 piece1 = new TetrisPiece
@@ -141,9 +145,10 @@ namespace UWP_Tetris
                     color = Colors.Cyan
                 };
             }
+            //S Piece
             else if (CreatePiece == 2)
             {
-                piece1 = new TetrisPiece
+                piece3 = new TetrisPiece
                 {
                     x = 100,
                     y = 50,
@@ -152,7 +157,7 @@ namespace UWP_Tetris
                     color = Colors.Red
                 };
 
-                piece2 = new TetrisPiece
+                piece4 = new TetrisPiece
                 {
                     x = 120,
                     y = 50,
@@ -161,7 +166,7 @@ namespace UWP_Tetris
                     color = Colors.Red
                 };
 
-                piece3 = new TetrisPiece
+                piece2 = new TetrisPiece
                 {
                     x = 100,
                     y = 70,
@@ -170,7 +175,7 @@ namespace UWP_Tetris
                     color = Colors.Red
                 };
 
-                piece4 = new TetrisPiece
+                piece1 = new TetrisPiece
                 {
                     x = 80,
                     y = 70,
@@ -179,6 +184,7 @@ namespace UWP_Tetris
                     color = Colors.Red
                 };
             }
+            //Z Piece
             else if (CreatePiece == 3)
             {
                 piece1 = new TetrisPiece
@@ -217,6 +223,7 @@ namespace UWP_Tetris
                     color = Colors.Green
                 };
             }
+            //L Piece
             else if (CreatePiece == 4)
             {
                 piece1 = new TetrisPiece
@@ -255,6 +262,7 @@ namespace UWP_Tetris
                     color = Colors.Orange
                 };
             }
+            //J Piece
             else if (CreatePiece == 5)
             {
                 piece1 = new TetrisPiece
@@ -293,9 +301,9 @@ namespace UWP_Tetris
                     color = Colors.Pink
                 };
             }
-            else if(CreatePiece == 6)
+            else if (CreatePiece == 6)
             {
-                piece1 = new TetrisPiece
+                piece2 = new TetrisPiece
                 {
                     x = 100,
                     y = 50,
@@ -304,7 +312,7 @@ namespace UWP_Tetris
                     color = Colors.Purple
                 };
 
-                piece2 = new TetrisPiece
+                piece3 = new TetrisPiece
                 {
                     x = 120,
                     y = 50,
@@ -313,7 +321,7 @@ namespace UWP_Tetris
                     color = Colors.Purple
                 };
 
-                piece3 = new TetrisPiece
+                piece1 = new TetrisPiece
                 {
                     x = 80,
                     y = 50,
@@ -356,6 +364,298 @@ namespace UWP_Tetris
             piece3.x += changeIntX;
             piece4.x += changeIntX;
         }
-    }
 
+        public void RotateTetrisPiece()
+        {
+            if (CurrentPieceMade == 1)
+            {
+                Rotate++;
+                if (Rotate % 4 == 1)
+                {
+                    piece1.x += 0;
+                    piece1.y += 0;
+                    piece2.x += 20;
+                    piece2.y += -20;
+                    piece3.x += 40;
+                    piece3.y += -40;
+                    piece4.x += 60;
+                    piece4.y += -60;
+                }
+                else if (Rotate % 4 == 2)
+                {
+                    piece1.x += 0;
+                    piece1.y += 0;
+                    piece2.x += -20;
+                    piece2.y += 20;
+                    piece3.x += -40;
+                    piece3.y += 40;
+                    piece4.x += -60;
+                    piece4.y += 60;
+                }
+                else if (Rotate % 4 == 3)
+                {
+                    piece1.x += 0;
+                    piece1.y += 0;
+                    piece2.x += 20;
+                    piece2.y += -20;
+                    piece3.x += 40;
+                    piece3.y += -40;
+                    piece4.x += 60;
+                    piece4.y += -60;
+                }
+                else if (Rotate % 4 == 0)
+                {
+                    piece1.x += 0;
+                    piece1.y += 0;
+                    piece2.x += -20;
+                    piece2.y += 20;
+                    piece3.x += -40;
+                    piece3.y += 40;
+                    piece4.x += -60;
+                    piece4.y += 60;
+                }
+            }
+            else if (CurrentPieceMade == 2)
+            {
+                Rotate++;
+                if (Rotate % 4 == 1)
+                {
+                    piece1.x += 0;
+                    piece1.y += 0;
+                    piece2.x += 0;
+                    piece2.y += 0;
+                    piece3.x += -20;
+                    piece3.y += 0;
+                    piece4.x += -20;
+                    piece4.y += 40;
+                }
+                else if (Rotate % 4 == 2)
+                {
+                    piece1.x += 0;
+                    piece1.y += 0;
+                    piece2.x += 0;
+                    piece2.y += 0;
+                    piece3.x += 20;
+                    piece3.y += 0;
+                    piece4.x += 20;
+                    piece4.y += -40;
+                }
+                else if (Rotate % 4 == 3)
+                {
+                    piece1.x += 0;
+                    piece1.y += 0;
+                    piece2.x += 0;
+                    piece2.y += 0;
+                    piece3.x += -20;
+                    piece3.y += 0;
+                    piece4.x += -20;
+                    piece4.y += 40;
+                }
+                else if (Rotate % 4 == 0)
+                {
+                    piece1.x += 0;
+                    piece1.y += 0;
+                    piece2.x += 0;
+                    piece2.y += 0;
+                    piece3.x += 20;
+                    piece3.y += 0;
+                    piece4.x += 20;
+                    piece4.y += -40;
+                }
+            }
+            else if (CurrentPieceMade == 3)
+            {
+                Rotate++;
+                if (Rotate % 4 == 1)
+                {
+                    piece1.x += 0;
+                    piece1.y += 20;
+                    piece2.x += 0;
+                    piece2.y += 0;
+                    piece3.x += 0;
+                    piece3.y += 0;
+                    piece4.x += -40;
+                    piece4.y += 20;
+                }
+                else if (Rotate % 4 == 2)
+                {
+                    piece1.x += 0;
+                    piece1.y += -20;
+                    piece2.x += 0;
+                    piece2.y += 0;
+                    piece3.x += 0;
+                    piece3.y += 0;
+                    piece4.x += 40;
+                    piece4.y += -20;
+                }
+                else if (Rotate % 4 == 3)
+                {
+                    piece1.x += 0;
+                    piece1.y += 20;
+                    piece2.x += 0;
+                    piece2.y += 0;
+                    piece3.x += 0;
+                    piece3.y += 0;
+                    piece4.x += -40;
+                    piece4.y += 20;
+                }
+                else if (Rotate % 4 == 0)
+                {
+                    piece1.x += 0;
+                    piece1.y += -20;
+                    piece2.x += 0;
+                    piece2.y += 0;
+                    piece3.x += 0;
+                    piece3.y += 0;
+                    piece4.x += 40;
+                    piece4.y += -20;
+                }
+            }
+            else if (CurrentPieceMade == 4)
+            {
+                Rotate++;
+                if (Rotate % 4 == 1)
+                {
+                    piece1.x += +40;
+                    piece1.y += 0;
+                    piece2.x += +20;
+                    piece2.y += -20;
+                    piece3.x += 0;
+                    piece3.y += -40;
+                    piece4.x += -20;
+                    piece4.y += -20;
+                }
+                else if (Rotate % 4 == 2)
+                {
+                    piece1.x += -20;
+                    piece1.y += +40;
+                    piece2.x += 0;
+                    piece2.y += 20;
+                    piece3.x += +20;
+                    piece3.y += 0;
+                    piece4.x += 0;
+                    piece4.y += -20;
+                }
+                else if (Rotate % 4 == 3)
+                {
+                    piece1.x += -20;
+                    piece1.y += -20;
+                    piece2.x += 0;
+                    piece2.y += 0;
+                    piece3.x += +20;
+                    piece3.y += +20;
+                    piece4.x += +40;
+                    piece4.y += 0;
+                }
+                else if (Rotate % 4 == 0)
+                {
+                    piece1.x += 0;
+                    piece1.y += -20;
+                    piece2.x += -20;
+                    piece2.y += 0;
+                    piece3.x += -40;
+                    piece3.y += 20;
+                    piece4.x += -20;
+                    piece4.y += 40;
+                }
+            }
+            else if (CurrentPieceMade == 5)
+            {
+                Rotate++;
+                if (Rotate % 4 == 1)
+                {
+                    piece1.x += 0;
+                    piece1.y += 0;
+                    piece2.x += 20;
+                    piece2.y += -20;
+                    piece3.x += 40;
+                    piece3.y += -40;
+                    piece4.x += 60;
+                    piece4.y += -20;
+                }
+                else if (Rotate % 4 == 2)
+                {
+                    piece1.x += 0;
+                    piece1.y += 40;
+                    piece2.x += -20;
+                    piece2.y += 20;
+                    piece3.x += -40;
+                    piece3.y += 0;
+                    piece4.x += -20;
+                    piece4.y += -20;
+                }
+                else if (Rotate % 4 == 3)
+                {
+                    piece1.x += 40;
+                    piece1.y += -20;
+                    piece2.x += 20;
+                    piece2.y += 0;
+                    piece3.x += 0;
+                    piece3.y += 20;
+                    piece4.x += -20;
+                    piece4.y += 0;
+                }
+                else if (Rotate % 4 == 0)
+                {
+                    piece1.x += -40;
+                    piece1.y += -20;
+                    piece2.x += -20;
+                    piece2.y += 0;
+                    piece3.x += 0;
+                    piece3.y += 20;
+                    piece4.x += -20;
+                    piece4.y += 40;
+                }
+                
+            }
+            else if (CurrentPieceMade == 6)
+            {
+                Rotate++;
+                if (Rotate % 4 == 1)
+                {
+                    piece1.x += 20;
+                    piece1.y += 0;
+                    piece2.x += 0;
+                    piece2.y += 20;
+                    piece3.x += -20;
+                    piece3.y += 40;
+                    piece4.x += -20;
+                    piece4.y += 0;
+                }
+                else if (Rotate % 4 == 2)
+                {
+                    piece1.x += 20;
+                    piece1.y += 20;
+                    piece2.x += 0;
+                    piece2.y += 0;
+                    piece3.x += -20;
+                    piece3.y += -20;
+                    piece4.x += 20;
+                    piece4.y += -20;
+                }
+                else if (Rotate % 4 == 3)
+                {
+                    piece1.x += -40;
+                    piece1.y += 20;
+                    piece2.x += -20;
+                    piece2.y += 0;
+                    piece3.x += 0;
+                    piece3.y += -20;
+                    piece4.x += 0;
+                    piece4.y += 20;
+                }
+                else if (Rotate % 4 == 0)
+                {
+                    piece1.x += 0;
+                    piece1.y += -40;
+                    piece2.x += 20;
+                    piece2.y += -20;
+                    piece3.x += 40;
+                    piece3.y += 0;
+                    piece4.x += 0;
+                    piece4.y += 0;
+                }
+            }
+        }
+    }
 }

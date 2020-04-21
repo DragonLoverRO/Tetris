@@ -34,8 +34,8 @@ namespace UWP_Tetris
         {
             this.InitializeComponent();
             tetris = new Tetris();
-            player = new MediaPlayer();
-            playmusic(player);
+            //player = new MediaPlayer();
+            //playmusic(player);
             createPiece();
             Window.Current.CoreWindow.KeyDown += canvasKeyDown;
         }
@@ -59,6 +59,10 @@ namespace UWP_Tetris
             else if(args.VirtualKey == Windows.System.VirtualKey.Right)
             {
                 tetris.MoveTetrisPiece(20);
+            }
+            else if (args.VirtualKey == Windows.System.VirtualKey.Space)
+            {
+                tetris.RotateTetrisPiece();
             }
         }
 
