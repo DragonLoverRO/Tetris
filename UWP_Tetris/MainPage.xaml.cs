@@ -39,7 +39,9 @@ namespace UWP_Tetris
             createPiece();
             Window.Current.CoreWindow.KeyDown += canvasKeyDown;
         }
-
+        //mediaplayer code taken from https://www.youtube.com/watch?v=hPxExtLCMK0
+        //song is The Swords of Ditto theme song edited for looping
+        //poorly edited by Dana *waves hand*
         private async void playmusic(MediaPlayer player)
         {
             Windows.Storage.StorageFolder folder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync(@"Assets");
