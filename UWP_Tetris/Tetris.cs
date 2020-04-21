@@ -372,8 +372,6 @@ namespace UWP_Tetris
                 Rotate++;
                 if (Rotate % 4 == 1)
                 {
-                    piece1.x += 0;
-                    piece1.y += 0;
                     piece2.x += 20;
                     piece2.y += -20;
                     piece3.x += 40;
@@ -383,8 +381,6 @@ namespace UWP_Tetris
                 }
                 else if (Rotate % 4 == 2)
                 {
-                    piece1.x += 0;
-                    piece1.y += 0;
                     piece2.x += -20;
                     piece2.y += 20;
                     piece3.x += -40;
@@ -394,8 +390,6 @@ namespace UWP_Tetris
                 }
                 else if (Rotate % 4 == 3)
                 {
-                    piece1.x += 0;
-                    piece1.y += 0;
                     piece2.x += 20;
                     piece2.y += -20;
                     piece3.x += 40;
@@ -405,8 +399,6 @@ namespace UWP_Tetris
                 }
                 else if (Rotate % 4 == 0)
                 {
-                    piece1.x += 0;
-                    piece1.y += 0;
                     piece2.x += -20;
                     piece2.y += 20;
                     piece3.x += -40;
@@ -420,45 +412,25 @@ namespace UWP_Tetris
                 Rotate++;
                 if (Rotate % 4 == 1)
                 {
-                    piece1.x += 0;
-                    piece1.y += 0;
-                    piece2.x += 0;
-                    piece2.y += 0;
                     piece3.x += -20;
-                    piece3.y += 0;
                     piece4.x += -20;
                     piece4.y += 40;
                 }
                 else if (Rotate % 4 == 2)
                 {
-                    piece1.x += 0;
-                    piece1.y += 0;
-                    piece2.x += 0;
-                    piece2.y += 0;
                     piece3.x += 20;
-                    piece3.y += 0;
                     piece4.x += 20;
                     piece4.y += -40;
                 }
                 else if (Rotate % 4 == 3)
                 {
-                    piece1.x += 0;
-                    piece1.y += 0;
-                    piece2.x += 0;
-                    piece2.y += 0;
                     piece3.x += -20;
-                    piece3.y += 0;
                     piece4.x += -20;
                     piece4.y += 40;
                 }
                 else if (Rotate % 4 == 0)
                 {
-                    piece1.x += 0;
-                    piece1.y += 0;
-                    piece2.x += 0;
-                    piece2.y += 0;
                     piece3.x += 20;
-                    piece3.y += 0;
                     piece4.x += 20;
                     piece4.y += -40;
                 }
@@ -468,45 +440,25 @@ namespace UWP_Tetris
                 Rotate++;
                 if (Rotate % 4 == 1)
                 {
-                    piece1.x += 0;
                     piece1.y += 20;
-                    piece2.x += 0;
-                    piece2.y += 0;
-                    piece3.x += 0;
-                    piece3.y += 0;
                     piece4.x += -40;
                     piece4.y += 20;
                 }
                 else if (Rotate % 4 == 2)
                 {
-                    piece1.x += 0;
                     piece1.y += -20;
-                    piece2.x += 0;
-                    piece2.y += 0;
-                    piece3.x += 0;
-                    piece3.y += 0;
                     piece4.x += 40;
                     piece4.y += -20;
                 }
                 else if (Rotate % 4 == 3)
                 {
-                    piece1.x += 0;
                     piece1.y += 20;
-                    piece2.x += 0;
-                    piece2.y += 0;
-                    piece3.x += 0;
-                    piece3.y += 0;
                     piece4.x += -40;
                     piece4.y += 20;
                 }
                 else if (Rotate % 4 == 0)
                 {
-                    piece1.x += 0;
                     piece1.y += -20;
-                    piece2.x += 0;
-                    piece2.y += 0;
-                    piece3.x += 0;
-                    piece3.y += 0;
                     piece4.x += 40;
                     piece4.y += -20;
                 }
@@ -517,10 +469,8 @@ namespace UWP_Tetris
                 if (Rotate % 4 == 1)
                 {
                     piece1.x += +40;
-                    piece1.y += 0;
                     piece2.x += +20;
                     piece2.y += -20;
-                    piece3.x += 0;
                     piece3.y += -40;
                     piece4.x += -20;
                     piece4.y += -20;
@@ -529,30 +479,22 @@ namespace UWP_Tetris
                 {
                     piece1.x += -20;
                     piece1.y += +40;
-                    piece2.x += 0;
                     piece2.y += 20;
                     piece3.x += +20;
-                    piece3.y += 0;
-                    piece4.x += 0;
                     piece4.y += -20;
                 }
                 else if (Rotate % 4 == 3)
                 {
                     piece1.x += -20;
                     piece1.y += -20;
-                    piece2.x += 0;
-                    piece2.y += 0;
                     piece3.x += +20;
                     piece3.y += +20;
                     piece4.x += +40;
-                    piece4.y += 0;
                 }
                 else if (Rotate % 4 == 0)
                 {
-                    piece1.x += 0;
                     piece1.y += -20;
                     piece2.x += -20;
-                    piece2.y += 0;
                     piece3.x += -40;
                     piece3.y += 20;
                     piece4.x += -20;
@@ -564,8 +506,6 @@ namespace UWP_Tetris
                 Rotate++;
                 if (Rotate % 4 == 1)
                 {
-                    piece1.x += 0;
-                    piece1.y += 0;
                     piece2.x += 20;
                     piece2.y += -20;
                     piece3.x += 40;
@@ -575,12 +515,10 @@ namespace UWP_Tetris
                 }
                 else if (Rotate % 4 == 2)
                 {
-                    piece1.x += 0;
                     piece1.y += 40;
                     piece2.x += -20;
                     piece2.y += 20;
                     piece3.x += -40;
-                    piece3.y += 0;
                     piece4.x += -20;
                     piece4.y += -20;
                 }
@@ -589,19 +527,14 @@ namespace UWP_Tetris
                     piece1.x += 40;
                     piece1.y += -20;
                     piece2.x += 20;
-                    piece2.y += 0;
-                    piece3.x += 0;
                     piece3.y += 20;
                     piece4.x += -20;
-                    piece4.y += 0;
                 }
                 else if (Rotate % 4 == 0)
                 {
                     piece1.x += -40;
                     piece1.y += -20;
                     piece2.x += -20;
-                    piece2.y += 0;
-                    piece3.x += 0;
                     piece3.y += 20;
                     piece4.x += -20;
                     piece4.y += 40;
@@ -614,20 +547,15 @@ namespace UWP_Tetris
                 if (Rotate % 4 == 1)
                 {
                     piece1.x += 20;
-                    piece1.y += 0;
-                    piece2.x += 0;
                     piece2.y += 20;
                     piece3.x += -20;
                     piece3.y += 40;
                     piece4.x += -20;
-                    piece4.y += 0;
                 }
                 else if (Rotate % 4 == 2)
                 {
                     piece1.x += 20;
                     piece1.y += 20;
-                    piece2.x += 0;
-                    piece2.y += 0;
                     piece3.x += -20;
                     piece3.y += -20;
                     piece4.x += 20;
@@ -638,22 +566,15 @@ namespace UWP_Tetris
                     piece1.x += -40;
                     piece1.y += 20;
                     piece2.x += -20;
-                    piece2.y += 0;
-                    piece3.x += 0;
                     piece3.y += -20;
-                    piece4.x += 0;
                     piece4.y += 20;
                 }
                 else if (Rotate % 4 == 0)
                 {
-                    piece1.x += 0;
                     piece1.y += -40;
                     piece2.x += 20;
                     piece2.y += -20;
                     piece3.x += 40;
-                    piece3.y += 0;
-                    piece4.x += 0;
-                    piece4.y += 0;
                 }
             }
         }
