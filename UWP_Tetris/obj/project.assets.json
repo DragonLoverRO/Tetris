@@ -8316,24 +8316,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\drama\\.nuget\\packages\\": {},
+    "C:\\Users\\malka\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\drama\\Documents\\GitHub\\Tetris\\UWP_Tetris\\UWP_Tetris.csproj",
+      "projectUniqueName": "C:\\Users\\malka\\Desktop\\UWP_Tetris\\UWP_Tetris.csproj",
       "projectName": "UWP_Tetris",
-      "projectPath": "C:\\Users\\drama\\Documents\\GitHub\\Tetris\\UWP_Tetris\\UWP_Tetris.csproj",
-      "packagesPath": "C:\\Users\\drama\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\drama\\Documents\\GitHub\\Tetris\\UWP_Tetris\\obj\\",
+      "projectPath": "C:\\Users\\malka\\Desktop\\UWP_Tetris\\UWP_Tetris.csproj",
+      "packagesPath": "C:\\Users\\malka\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\malka\\Desktop\\UWP_Tetris\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\drama\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\malka\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

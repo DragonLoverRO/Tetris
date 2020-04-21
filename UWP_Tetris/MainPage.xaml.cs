@@ -19,7 +19,6 @@ using Windows.UI.Core;
 using Windows.Media.Playback;
 using Windows.Media.Core;
 
-
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 //sources: https://github.com/EricCharnesky/CIS297-Winter2020/tree/master/PongExample/PongExample
 namespace UWP_Tetris
@@ -27,28 +26,20 @@ namespace UWP_Tetris
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    
-
     public sealed partial class MainPage : Page
     {
-
         Tetris tetris;
+        MediaPlayer player;
         public MainPage()
         {
-            //mediaplayer code taken from https://www.youtube.com/watch?v=hPxExtLCMK0
-            //song is The Swords of Ditto theme song edited for looping
-            //poorly edited by Dana *waves hand*
-
-           
             this.InitializeComponent();
-            MediaPlayer player;
+            tetris = new Tetris();
             player = new MediaPlayer();
             playmusic(player);
-            tetris = new Tetris();
             createPiece();
-
             Window.Current.CoreWindow.KeyDown += canvasKeyDown;
         }
+
         private async void playmusic(MediaPlayer player)
         {
             Windows.Storage.StorageFolder folder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync(@"Assets");
@@ -57,7 +48,6 @@ namespace UWP_Tetris
             player.Play();
             player.IsLoopingEnabled = true;
         }
-
         private void canvasKeyDown(CoreWindow sender, KeyEventArgs args)
         {
             if(args.VirtualKey == Windows.System.VirtualKey.Left)

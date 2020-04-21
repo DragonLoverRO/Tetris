@@ -11,6 +11,8 @@
 
     <Grid>
         <canvas:CanvasAnimatedControl x:ConnectionId='2' x:Name="canvas"                                                                                    RequestedTheme="Light" />
+        <MediaElement x:ConnectionId='3' Name="swordsofdittoloopish" />
     </Grid>
+    
 </Page>
 

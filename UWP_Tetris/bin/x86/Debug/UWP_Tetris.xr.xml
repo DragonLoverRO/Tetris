@@ -17,6 +17,9 @@
       <RootEvent Name="Update" />
       <RootEvent Name="CreateResources" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.MediaElement">
+      <RootProperty Name="Name" />
+    </RootType>
     <RootType FullName="UWP_Tetris.MainPage" />
   </Roots.RootTypes>
 </Roots>
