@@ -22,9 +22,16 @@ namespace UWP_Tetris
         private Random rnd = new Random();
         private int Rotate = 4;
         private int CurrentPieceMade;
+        public bool gameOver { get; private set; }
+
+        private bool isUserPieceMovingLeftward;
+        private bool isUserPieceMovingRightward;
+        private bool isUserPieceMovingDownwords;
 
         public Tetris()
         {
+            gameOver = false;
+
             LeftWall = new Rectangle
             {
                 x = 10,
