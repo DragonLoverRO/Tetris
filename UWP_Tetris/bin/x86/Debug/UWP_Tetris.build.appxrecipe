@@ -10,22 +10,22 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>578730e6-8191-4d42-9956-20b6befe05be</PackageIdentityName>
     <PackageIdentityPublisher>CN=malka</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\malka\Desktop\UWP_Tetris\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\malka\Desktop\UWP_Tetris\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\bin\x86\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\malka\Desktop\UWP_Tetris\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\bin\x86\Debug\UWP_Tetris.exe">
+    <AppxPackagedFile Include="C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\bin\x86\Debug\UWP_Tetris.exe">
       <PackagePath>entrypoint\UWP_Tetris.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.9\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
@@ -40,55 +40,55 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.18362.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\Assets\swordsofdittoloopish.mp3">
+    <AppxPackagedFile Include="C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\Assets\swordsofdittoloopish.mp3">
       <PackagePath>Assets\swordsofdittoloopish.mp3</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\bin\x86\Debug\UWP_Tetris.xr.xml">
+    <AppxPackagedFile Include="C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\bin\x86\Debug\UWP_Tetris.xr.xml">
       <PackagePath>UWP_Tetris.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\bin\x86\Debug\Core\UWP_Tetris.exe">
+    <AppxPackagedFile Include="C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\bin\x86\Debug\Core\UWP_Tetris.exe">
       <PackagePath>UWP_Tetris.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

@@ -11,7 +11,6 @@
 
     <Grid>
         <canvas:CanvasAnimatedControl x:Name="canvas" Draw="Canvas_Draw" Update="Canvas_Update" CreateResources="Canvas_CreateResources" RequestedTheme="Light" />
-        <MediaElement Name="swordsofdittoloopish" />
     </Grid>
     
 </Page>

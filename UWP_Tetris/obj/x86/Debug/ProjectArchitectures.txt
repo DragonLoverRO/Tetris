@@ -1,1 +1,1 @@
-C:\Users\malka\Desktop\UWP_Tetris\UWP_Tetris.csproj;x86
+C:\Users\malka\Documents\GitHub\Tetris\UWP_Tetris\UWP_Tetris.csproj;x86
