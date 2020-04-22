@@ -25,9 +25,7 @@ namespace UWP_Tetris
         public bool gameOver { get; private set; }
 
         private bool isUserPieceMovingLeftward;
-        private bool isUserPieceMovingRightward;
         
-
         public Tetris()
         {
             gameOver = false;
@@ -375,20 +373,27 @@ namespace UWP_Tetris
                 isUserPieceMovingLeftward = false;
             }
 
-            if (changeIntX == 20)
+            if (isUserPieceMovingLeftward)
             {
-                isUserPieceMovingRightward = true;
+                if (piece1.x - 20 >= LeftWall.x + 10 && piece2.x - 20 >= LeftWall.x + 10 && piece3.x - 20 >= LeftWall.x + 10 && piece4.x - 20 >= LeftWall.x + 10)
+                {
+                    piece1.x += changeIntX;
+                    piece2.x += changeIntX;
+                    piece3.x += changeIntX;
+                    piece4.x += changeIntX;
+                }
             }
+
             else
             {
-                isUserPieceMovingRightward = false;
+                if (piece1.x + 20 <= RightWall.x - 10 && piece2.x + 20 <= RightWall.x - 10 && piece3.x + 20 <= RightWall.x - 10 && piece4.x + 20 <= RightWall.x - 10)
+                {
+                    piece1.x += changeIntX;
+                    piece2.x += changeIntX;
+                    piece3.x += changeIntX;
+                    piece4.x += changeIntX;
+                }
             }
-
-
-            piece1.x += changeIntX;
-            piece2.x += changeIntX;
-            piece3.x += changeIntX;
-            piece4.x += changeIntX;
         }
 
         public void RotateTetrisPiece()
