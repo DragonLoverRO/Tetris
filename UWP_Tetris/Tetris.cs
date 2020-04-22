@@ -26,7 +26,7 @@ namespace UWP_Tetris
 
         private bool isUserPieceMovingLeftward;
         private bool isUserPieceMovingRightward;
-        private bool isUserPieceMovingDownwords;
+        
 
         public Tetris()
         {
@@ -366,6 +366,25 @@ namespace UWP_Tetris
 
         public void MoveTetrisPiece(int changeIntX)
         {
+            if (changeIntX == -20)
+            {
+                isUserPieceMovingLeftward = true;
+            }
+            else
+            {
+                isUserPieceMovingLeftward = false;
+            }
+
+            if (changeIntX == 20)
+            {
+                isUserPieceMovingRightward = true;
+            }
+            else
+            {
+                isUserPieceMovingRightward = false;
+            }
+
+
             piece1.x += changeIntX;
             piece2.x += changeIntX;
             piece3.x += changeIntX;
