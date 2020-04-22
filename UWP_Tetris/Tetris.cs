@@ -443,7 +443,7 @@ namespace UWP_Tetris
                     piece4.y += 60;
                 }
             }
-            // testing for the S piece works all done
+            // testing for the S piece works // it works!!
             else if (CurrentPieceMade == 2)
             {
                 if (Rotate % 4 == 0)
@@ -475,7 +475,7 @@ namespace UWP_Tetris
                     piece4.y += -40;
                 }
             }
-            //testing for the Z piece 
+            //testing for the Z piece // It works!! 
             else if (CurrentPieceMade == 3)
             {
                 if (Rotate % 4 == 0)
@@ -485,7 +485,7 @@ namespace UWP_Tetris
                     piece4.x += -40;
                     piece4.y += 20;
                 }
-                else if (Rotate % 4 == 1)
+                else if (Rotate % 4 == 1 && piece2.x <= RightWall.x - 30)
                 {
                     Rotate++;
                     piece1.y += -20;
@@ -499,7 +499,7 @@ namespace UWP_Tetris
                     piece4.x += -40;
                     piece4.y += 20;
                 }
-                else if (Rotate % 4 == 3)
+                else if (Rotate % 4 == 3 && piece2.x <= RightWall.x - 30)
                 {
                     Rotate++;
                     piece1.y += -20;
