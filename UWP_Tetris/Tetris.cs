@@ -70,6 +70,7 @@ namespace UWP_Tetris
         public void setPiece()
         {
             int CreatePiece = rnd.Next(7);
+            //int CreatePiece = 2;  me testing the blocks ignore will delete after done with checking
             Rotate = 4;
             CurrentPieceMade = CreatePiece;
             //O piece
@@ -306,6 +307,7 @@ namespace UWP_Tetris
                     color = Colors.Pink
                 };
             }
+            // T piece
             else if (CreatePiece == 6)
             {
                 piece2 = new TetrisPiece
@@ -397,12 +399,12 @@ namespace UWP_Tetris
         }
 
         public void RotateTetrisPiece()
-        {
+        {    // the boundries for the L shapes works testing completed 
             if (CurrentPieceMade == 1)
             {
-                Rotate++;
-                if (Rotate % 4 == 1)
+                if (Rotate % 4 == 0 && piece1.x <= RightWall.x - 70)
                 {
+                    Rotate++;
                     piece2.x += 20;
                     piece2.y += -20;
                     piece3.x += 40;
@@ -410,8 +412,9 @@ namespace UWP_Tetris
                     piece4.x += 60;
                     piece4.y += -60;
                 }
-                else if (Rotate % 4 == 2)
+                else if (Rotate % 4 == 1)
                 {
+                    Rotate++;
                     piece2.x += -20;
                     piece2.y += 20;
                     piece3.x += -40;
@@ -419,8 +422,9 @@ namespace UWP_Tetris
                     piece4.x += -60;
                     piece4.y += 60;
                 }
-                else if (Rotate % 4 == 3)
+                else if (Rotate % 4 == 2 && piece1.x <= RightWall.x - 70)
                 {
+                    Rotate++;
                     piece2.x += 20;
                     piece2.y += -20;
                     piece3.x += 40;
@@ -428,8 +432,9 @@ namespace UWP_Tetris
                     piece4.x += 60;
                     piece4.y += -60;
                 }
-                else if (Rotate % 4 == 0)
+                else if (Rotate % 4 == 3)
                 {
+                    Rotate++;
                     piece2.x += -20;
                     piece2.y += 20;
                     piece3.x += -40;
@@ -440,27 +445,30 @@ namespace UWP_Tetris
             }
             else if (CurrentPieceMade == 2)
             {
-                Rotate++;
-                if (Rotate % 4 == 1)
+                if (Rotate % 4 == 0)
                 {
+                    Rotate++;
                     piece3.x += -20;
                     piece4.x += -20;
                     piece4.y += 40;
                 }
-                else if (Rotate % 4 == 2)
+                else if (Rotate % 4 == 1)
                 {
+                    Rotate++;
                     piece3.x += 20;
                     piece4.x += 20;
                     piece4.y += -40;
                 }
-                else if (Rotate % 4 == 3)
+                else if (Rotate % 4 == 2)
                 {
+                    Rotate++;
                     piece3.x += -20;
                     piece4.x += -20;
                     piece4.y += 40;
                 }
-                else if (Rotate % 4 == 0)
+                else if (Rotate % 4 == 3)
                 {
+                    Rotate++;
                     piece3.x += 20;
                     piece4.x += 20;
                     piece4.y += -40;
@@ -468,27 +476,30 @@ namespace UWP_Tetris
             }
             else if (CurrentPieceMade == 3)
             {
-                Rotate++;
-                if (Rotate % 4 == 1)
+                if (Rotate % 4 == 0)
                 {
+                    Rotate++;
                     piece1.y += 20;
                     piece4.x += -40;
                     piece4.y += 20;
                 }
-                else if (Rotate % 4 == 2)
+                else if (Rotate % 4 == 1)
                 {
+                    Rotate++;
                     piece1.y += -20;
                     piece4.x += 40;
                     piece4.y += -20;
                 }
-                else if (Rotate % 4 == 3)
+                else if (Rotate % 4 == 2)
                 {
+                    Rotate++;
                     piece1.y += 20;
                     piece4.x += -40;
                     piece4.y += 20;
                 }
-                else if (Rotate % 4 == 0)
+                else if (Rotate % 4 == 3)
                 {
+                    Rotate++;
                     piece1.y += -20;
                     piece4.x += 40;
                     piece4.y += -20;
@@ -496,9 +507,9 @@ namespace UWP_Tetris
             }
             else if (CurrentPieceMade == 4)
             {
-                Rotate++;
-                if (Rotate % 4 == 1)
+                if (Rotate % 4 == 0)
                 {
+                    Rotate++;
                     piece1.x += +40;
                     piece2.x += +20;
                     piece2.y += -20;
@@ -506,24 +517,27 @@ namespace UWP_Tetris
                     piece4.x += -20;
                     piece4.y += -20;
                 }
-                else if (Rotate % 4 == 2)
+                else if (Rotate % 4 == 1)
                 {
+                    Rotate++;
                     piece1.x += -20;
                     piece1.y += +40;
                     piece2.y += 20;
                     piece3.x += +20;
                     piece4.y += -20;
                 }
-                else if (Rotate % 4 == 3)
+                else if (Rotate % 4 == 2)
                 {
+                    Rotate++;
                     piece1.x += -20;
                     piece1.y += -20;
                     piece3.x += +20;
                     piece3.y += +20;
                     piece4.x += +40;
                 }
-                else if (Rotate % 4 == 0)
+                else if (Rotate % 4 == 3)
                 {
+                    Rotate++;
                     piece1.y += -20;
                     piece2.x += -20;
                     piece3.x += -40;
@@ -534,9 +548,9 @@ namespace UWP_Tetris
             }
             else if (CurrentPieceMade == 5)
             {
-                Rotate++;
-                if (Rotate % 4 == 1)
+                if (Rotate % 4 == 0)
                 {
+                    Rotate++;
                     piece2.x += 20;
                     piece2.y += -20;
                     piece3.x += 40;
@@ -544,8 +558,9 @@ namespace UWP_Tetris
                     piece4.x += 60;
                     piece4.y += -20;
                 }
-                else if (Rotate % 4 == 2)
+                else if (Rotate % 4 == 1)
                 {
+                    Rotate++;
                     piece1.y += 40;
                     piece2.x += -20;
                     piece2.y += 20;
@@ -553,16 +568,18 @@ namespace UWP_Tetris
                     piece4.x += -20;
                     piece4.y += -20;
                 }
-                else if (Rotate % 4 == 3)
+                else if (Rotate % 4 == 2)
                 {
+                    Rotate++;
                     piece1.x += 40;
                     piece1.y += -20;
                     piece2.x += 20;
                     piece3.y += 20;
                     piece4.x += -20;
                 }
-                else if (Rotate % 4 == 0)
+                else if (Rotate % 4 == 3)
                 {
+                    Rotate++;
                     piece1.x += -40;
                     piece1.y += -20;
                     piece2.x += -20;
@@ -574,17 +591,18 @@ namespace UWP_Tetris
             }
             else if (CurrentPieceMade == 6)
             {
-                Rotate++;
-                if (Rotate % 4 == 1)
+                if (Rotate % 4 == 0)
                 {
+                    Rotate++;
                     piece1.x += 20;
                     piece2.y += 20;
                     piece3.x += -20;
                     piece3.y += 40;
                     piece4.x += -20;
                 }
-                else if (Rotate % 4 == 2)
+                else if (Rotate % 4 == 1)
                 {
+                    Rotate++;
                     piece1.x += 20;
                     piece1.y += 20;
                     piece3.x += -20;
@@ -592,16 +610,18 @@ namespace UWP_Tetris
                     piece4.x += 20;
                     piece4.y += -20;
                 }
-                else if (Rotate % 4 == 3)
+                else if (Rotate % 4 == 2)
                 {
+                    Rotate++;
                     piece1.x += -40;
                     piece1.y += 20;
                     piece2.x += -20;
                     piece3.y += -20;
                     piece4.y += 20;
                 }
-                else if (Rotate % 4 == 0)
+                else if (Rotate % 4 == 3)
                 {
+                    Rotate++;
                     piece1.y += -40;
                     piece2.x += 20;
                     piece2.y += -20;
