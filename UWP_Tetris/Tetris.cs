@@ -70,8 +70,8 @@ namespace UWP_Tetris
         public void setPiece()
         {
             //int CreatePiece = rnd.Next(7);
-            int CreatePiece = 3;  //me testing the blocks ignore will delete after done with checking
-            Rotate = 4;
+            int CreatePiece = 4;  //me testing the blocks ignore will delete after done with checking
+            Rotate = 5;
             CurrentPieceMade = CreatePiece;
             //O piece
             if (CreatePiece == 0)
@@ -507,10 +507,10 @@ namespace UWP_Tetris
                     piece4.y += -20;
                 }
             }
-            //testing for the
+            //testing for the L piece // works!! 
             else if (CurrentPieceMade == 4)
             {
-                if (Rotate % 4 == 0)
+                if (Rotate % 4 == 0 && piece4.x <= RightWall.x - 30)
                 {
                     Rotate++;
                     piece1.x += +40;
@@ -529,7 +529,7 @@ namespace UWP_Tetris
                     piece3.x += +20;
                     piece4.y += -20;
                 }
-                else if (Rotate % 4 == 2)
+                else if (Rotate % 4 == 2 && piece3.x <= RightWall.x - 30)
                 {
                     Rotate++;
                     piece1.x += -20;
@@ -549,7 +549,7 @@ namespace UWP_Tetris
                     piece4.y += 40;
                 }
             }
-            //testing for the
+            //testing for the J piece //
             else if (CurrentPieceMade == 5)
             {
                 if (Rotate % 4 == 0)
