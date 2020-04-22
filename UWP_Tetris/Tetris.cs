@@ -69,8 +69,7 @@ namespace UWP_Tetris
 
         public void setPiece()
         {
-            //int CreatePiece = rnd.Next(7);
-            int CreatePiece = 6;  //me testing the blocks ignore will delete after done with checking
+            int CreatePiece = rnd.Next(7);
             Rotate = 4;
             CurrentPieceMade = CreatePiece;
             //O piece
