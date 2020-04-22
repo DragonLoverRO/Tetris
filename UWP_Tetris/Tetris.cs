@@ -69,8 +69,8 @@ namespace UWP_Tetris
 
         public void setPiece()
         {
-            int CreatePiece = rnd.Next(7);
-            //int CreatePiece = 2;  me testing the blocks ignore will delete after done with checking
+            //int CreatePiece = rnd.Next(7);
+            int CreatePiece = 3;  //me testing the blocks ignore will delete after done with checking
             Rotate = 4;
             CurrentPieceMade = CreatePiece;
             //O piece
@@ -443,6 +443,7 @@ namespace UWP_Tetris
                     piece4.y += 60;
                 }
             }
+            // testing for the S piece works all done
             else if (CurrentPieceMade == 2)
             {
                 if (Rotate % 4 == 0)
@@ -452,21 +453,21 @@ namespace UWP_Tetris
                     piece4.x += -20;
                     piece4.y += 40;
                 }
-                else if (Rotate % 4 == 1)
+                else if (Rotate % 4 == 1 && piece2.x <= RightWall.x - 30)
                 {
                     Rotate++;
                     piece3.x += 20;
                     piece4.x += 20;
                     piece4.y += -40;
                 }
-                else if (Rotate % 4 == 2)
+                else if (Rotate % 4 == 2 )
                 {
                     Rotate++;
                     piece3.x += -20;
                     piece4.x += -20;
                     piece4.y += 40;
                 }
-                else if (Rotate % 4 == 3)
+                else if (Rotate % 4 == 3 && piece2.x <= RightWall.x - 30)
                 {
                     Rotate++;
                     piece3.x += 20;
@@ -474,6 +475,7 @@ namespace UWP_Tetris
                     piece4.y += -40;
                 }
             }
+            //testing for the Z piece 
             else if (CurrentPieceMade == 3)
             {
                 if (Rotate % 4 == 0)
@@ -505,6 +507,7 @@ namespace UWP_Tetris
                     piece4.y += -20;
                 }
             }
+            //testing for the
             else if (CurrentPieceMade == 4)
             {
                 if (Rotate % 4 == 0)
@@ -546,6 +549,7 @@ namespace UWP_Tetris
                     piece4.y += 40;
                 }
             }
+            //testing for the
             else if (CurrentPieceMade == 5)
             {
                 if (Rotate % 4 == 0)
@@ -589,6 +593,7 @@ namespace UWP_Tetris
                 }
                 
             }
+            //testing for the
             else if (CurrentPieceMade == 6)
             {
                 if (Rotate % 4 == 0)
