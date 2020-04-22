@@ -593,7 +593,7 @@ namespace UWP_Tetris
                 }
                 
             }
-            //testing for the
+            //testing for the T // IT WORKS!!
             else if (CurrentPieceMade == 6)
             {
                 if (Rotate % 4 == 0)
@@ -605,7 +605,7 @@ namespace UWP_Tetris
                     piece3.y += 40;
                     piece4.x += -20;
                 }
-                else if (Rotate % 4 == 1)
+                else if (Rotate % 4 == 1 && piece3.x <= RightWall.x - 30)
                 {
                     Rotate++;
                     piece1.x += 20;
@@ -624,7 +624,7 @@ namespace UWP_Tetris
                     piece3.y += -20;
                     piece4.y += 20;
                 }
-                else if (Rotate % 4 == 3)
+                else if (Rotate % 4 == 3 && piece4.x <= RightWall.x - 30) 
                 {
                     Rotate++;
                     piece1.y += -40;
