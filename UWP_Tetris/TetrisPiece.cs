@@ -7,5 +7,9 @@ namespace UWP_Tetris
     public class TetrisPiece : Rectangle
     {
         
+        public void moveDownward()
+        {
+            y += 20;
+        }
     }
 }

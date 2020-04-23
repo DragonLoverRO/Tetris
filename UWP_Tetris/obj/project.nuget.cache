@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "V7OsCbRAy0fB0q5iJeXVj6hg7wDcr7svy/4t9+yeR9km/IrfTUV234uuBd0alcbQQlKpwLhX1iUVdnUR3bOMCQ==",
+  "dgSpecHash": "aW+HWExB6wB4I1R3UqVNqWKJeYLfx216sfqcUgV5xI2TePiD0TN48x3h0yxj3/WKQ6JicCy+YxI+FkKZXaisPw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\andra\\Documents\\GitHub\\Tetris\\UWP_Tetris\\UWP_Tetris.csproj",
+  "projectFilePath": "C:\\Users\\malka\\Documents\\GitHub\\Tetris\\UWP_Tetris\\UWP_Tetris.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.native.compiler\\2.2.7-rel-27913-00\\microsoft.net.native.compiler.2.2.7-rel-27913-00.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.uwpcoreruntimesdk\\2.2.9\\microsoft.net.uwpcoreruntimesdk.2.2.9.nupkg.sha512",
@@ -27,7 +27,7 @@
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-x86.microsoft.net.native.sharedlibrary\\2.2.7-rel-27913-00\\runtime.win10-x86.microsoft.net.native.sharedlibrary.2.2.7-rel-27913-00.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\\2.2.9\\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk.2.2.9.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\\6.2.9\\runtime.win10-x86.microsoft.netcore.universalwindowsplatform.6.2.9.nupkg.sha512",
-    "C:\\Users\\andra\\.nuget\\packages\\win2d.uwp\\1.25.0\\win2d.uwp.1.25.0.nupkg.sha512"
+    "C:\\Users\\malka\\.nuget\\packages\\win2d.uwp\\1.25.0\\win2d.uwp.1.25.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -18,6 +18,7 @@ using Windows.UI;
 using Windows.UI.Core;
 using Windows.Media.Playback;
 using Windows.Media.Core;
+using System.Threading;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 //sources: https://github.com/EricCharnesky/CIS297-Winter2020/tree/master/PongExample/PongExample
@@ -69,6 +70,7 @@ namespace UWP_Tetris
         private void createPiece()
         {
             tetris.setPiece();
+            
         }
 
         private void Canvas_CreateResources(CanvasAnimatedControl sender, CanvasCreateResourcesEventArgs args)
@@ -84,7 +86,7 @@ namespace UWP_Tetris
 
         private void Canvas_Update(ICanvasAnimatedControl sender, CanvasAnimatedUpdateEventArgs args)
         {
-
+            //tetris.UpdateDown();
         }
     }
 }
