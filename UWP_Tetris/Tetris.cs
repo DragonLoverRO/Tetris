@@ -24,7 +24,7 @@ namespace UWP_Tetris
         private Random rnd = new Random();
         private int Rotate = 4;
         private int CurrentPieceMade;
-        private int moveingDown;
+        private int movingDown;
         private int piece1XCordinate;
         private int piece1YCordinate;
         private int piece2XCordinate;
@@ -33,6 +33,8 @@ namespace UWP_Tetris
         private int piece3YCordinate;
         private int piece4XCordinate;
         private int piece4YCordinate;
+        private int bottomPieceY;
+        private int bottomPieceX;
         public bool gameOver { get; private set; }
         private bool isUserPieceMovingLeftward;
         private bool notAtBottom;
@@ -80,10 +82,10 @@ namespace UWP_Tetris
         public void setPiece()
         {
             //int CreatePiece = rnd.Next(7);
-            int CreatePiece = 3;
+            int CreatePiece = 0;
             Rotate = 4;
             CurrentPieceMade = CreatePiece;
-            moveingDown = 0;
+            movingDown = 0;
             //O piece
             if (CreatePiece == 0)
             {
@@ -543,6 +545,7 @@ namespace UWP_Tetris
                     tetrisBoard[piece3XCordinate, piece3YCordinate] = piece3;
                     tetrisBoard[piece4XCordinate, piece4YCordinate] = piece4;
 
+                    piece1 = null;
                     piece2 = null;
                     piece3 = null;
                     piece4 = null;
@@ -576,6 +579,7 @@ namespace UWP_Tetris
                     tetrisBoard[piece3XCordinate, piece3YCordinate] = piece3;
                     tetrisBoard[piece4XCordinate, piece4YCordinate] = piece4;
 
+                    piece1 = null;
                     piece2 = null;
                     piece3 = null;
                     piece4 = null;
@@ -609,6 +613,7 @@ namespace UWP_Tetris
                     tetrisBoard[piece3XCordinate, piece3YCordinate] = piece3;
                     tetrisBoard[piece4XCordinate, piece4YCordinate] = piece4;
 
+                    piece1 = null;
                     piece2 = null;
                     piece3 = null;
                     piece4 = null;
@@ -642,6 +647,7 @@ namespace UWP_Tetris
                     tetrisBoard[piece3XCordinate, piece3YCordinate] = piece3;
                     tetrisBoard[piece4XCordinate, piece4YCordinate] = piece4;
 
+                    piece1 = null;
                     piece2 = null;
                     piece3 = null;
                     piece4 = null;
@@ -670,6 +676,8 @@ namespace UWP_Tetris
                     tetrisBoard[piece3XCordinate, piece3YCordinate] = piece3;
                     tetrisBoard[piece4XCordinate, piece4YCordinate] = piece4;
 
+                    piece1 = null;
+                    piece2 = null;
                     piece3 = null;
                     piece4 = null;
                 }
@@ -693,6 +701,8 @@ namespace UWP_Tetris
                     tetrisBoard[piece3XCordinate, piece3YCordinate] = piece3;
                     tetrisBoard[piece4XCordinate, piece4YCordinate] = piece4;
 
+                    piece1 = null;
+                    piece2 = null;
                     piece3 = null;
                     piece4 = null;
                 }
@@ -716,6 +726,8 @@ namespace UWP_Tetris
                     tetrisBoard[piece3XCordinate, piece3YCordinate] = piece3;
                     tetrisBoard[piece4XCordinate, piece4YCordinate] = piece4;
 
+                    piece1 = null;
+                    piece2 = null;
                     piece3 = null;
                     piece4 = null;
                 }
@@ -739,6 +751,8 @@ namespace UWP_Tetris
                     tetrisBoard[piece3XCordinate, piece3YCordinate] = piece3;
                     tetrisBoard[piece4XCordinate, piece4YCordinate] = piece4;
 
+                    piece1 = null;
+                    piece2 = null;
                     piece3 = null;
                     piece4 = null;
                 }
@@ -769,6 +783,8 @@ namespace UWP_Tetris
                     tetrisBoard[piece4XCordinate, piece4YCordinate] = piece4;
 
                     piece1 = null;
+                    piece2 = null;
+                    piece3 = null;
                     piece4 = null;
                 }
                 else if (Rotate % 4 == 1 && tetrisBoard[piece2XCordinate, piece2YCordinate].x <= RightWall.x - 30)
@@ -792,6 +808,8 @@ namespace UWP_Tetris
                     tetrisBoard[piece4XCordinate, piece4YCordinate] = piece4;
 
                     piece1 = null;
+                    piece2 = null;
+                    piece3 = null;
                     piece4 = null;
                 }
                 else if (Rotate % 4 == 2 
@@ -817,6 +835,8 @@ namespace UWP_Tetris
                     tetrisBoard[piece4XCordinate, piece4YCordinate] = piece4;
 
                     piece1 = null;
+                    piece2 = null;
+                    piece3 = null;
                     piece4 = null;
                 }
                 else if (Rotate % 4 == 3 && tetrisBoard[piece2XCordinate, piece2YCordinate].x <= RightWall.x - 30)
@@ -840,6 +860,8 @@ namespace UWP_Tetris
                     tetrisBoard[piece4XCordinate, piece4YCordinate] = piece4;
 
                     piece1 = null;
+                    piece2 = null;
+                    piece3 = null;
                     piece4 = null;
                 }
             }
@@ -855,6 +877,33 @@ namespace UWP_Tetris
                     tetrisBoard[piece3XCordinate, piece3YCordinate].y += -40;
                     tetrisBoard[piece4XCordinate, piece4YCordinate].x += -20;
                     tetrisBoard[piece4XCordinate, piece4YCordinate].y += -20;
+
+                    piece1 = tetrisBoard[piece1XCordinate, piece1YCordinate];
+                    piece2 = tetrisBoard[piece2XCordinate, piece2YCordinate];
+                    piece3 = tetrisBoard[piece3XCordinate, piece3YCordinate];
+                    piece4 = tetrisBoard[piece4XCordinate, piece4YCordinate];
+
+                    tetrisBoard[piece1XCordinate, piece1YCordinate] = null;
+                    tetrisBoard[piece2XCordinate, piece2YCordinate] = null;
+                    tetrisBoard[piece3XCordinate, piece3YCordinate] = null;
+                    tetrisBoard[piece4XCordinate, piece4YCordinate] = null;
+
+                    piece1XCordinate += 2;
+                    piece2XCordinate += 1;
+                    piece2YCordinate -= 1;
+                    piece3YCordinate -= 2;
+                    piece4XCordinate -= 1;
+                    piece4YCordinate -= 1;
+
+                    tetrisBoard[piece1XCordinate, piece1YCordinate] = piece1;
+                    tetrisBoard[piece2XCordinate, piece2YCordinate] = piece2;
+                    tetrisBoard[piece3XCordinate, piece3YCordinate] = piece3;
+                    tetrisBoard[piece4XCordinate, piece4YCordinate] = piece4;
+
+                    piece1 = null;
+                    piece2 = null;
+                    piece3 = null;
+                    piece4 = null;
                 }
                 else if (Rotate % 4 == 1 && tetrisBoard[piece1XCordinate, piece1YCordinate].y <= BottomWall.y - 60 
                     && tetrisBoard[piece2XCordinate, piece2YCordinate].y <= BottomWall.y - 40)
@@ -865,6 +914,32 @@ namespace UWP_Tetris
                     tetrisBoard[piece2XCordinate, piece2YCordinate].y += 20;
                     tetrisBoard[piece3XCordinate, piece3YCordinate].x += +20;
                     tetrisBoard[piece4XCordinate, piece4YCordinate].y += -20;
+
+                    piece1 = tetrisBoard[piece1XCordinate, piece1YCordinate];
+                    piece2 = tetrisBoard[piece2XCordinate, piece2YCordinate];
+                    piece3 = tetrisBoard[piece3XCordinate, piece3YCordinate];
+                    piece4 = tetrisBoard[piece4XCordinate, piece4YCordinate];
+
+                    tetrisBoard[piece1XCordinate, piece1YCordinate] = null;
+                    tetrisBoard[piece2XCordinate, piece2YCordinate] = null;
+                    tetrisBoard[piece3XCordinate, piece3YCordinate] = null;
+                    tetrisBoard[piece4XCordinate, piece4YCordinate] = null;
+
+                    piece1XCordinate -= 1;
+                    piece1YCordinate += 2;
+                    piece2YCordinate += 1;
+                    piece3XCordinate += 1;
+                    piece4YCordinate -= 1;
+
+                    tetrisBoard[piece1XCordinate, piece1YCordinate] = piece1;
+                    tetrisBoard[piece2XCordinate, piece2YCordinate] = piece2;
+                    tetrisBoard[piece3XCordinate, piece3YCordinate] = piece3;
+                    tetrisBoard[piece4XCordinate, piece4YCordinate] = piece4;
+
+                    piece1 = null;
+                    piece2 = null;
+                    piece3 = null;
+                    piece4 = null;
                 }
                 else if (Rotate % 4 == 2 && tetrisBoard[piece3XCordinate, piece3YCordinate].x <= RightWall.x - 40)
                 {
@@ -874,6 +949,29 @@ namespace UWP_Tetris
                     tetrisBoard[piece3XCordinate, piece3YCordinate].x += +20;
                     tetrisBoard[piece3XCordinate, piece3YCordinate].y += +20;
                     tetrisBoard[piece4XCordinate, piece4YCordinate].x += +40;
+
+                    piece1 = tetrisBoard[piece1XCordinate, piece1YCordinate];
+                    piece3 = tetrisBoard[piece3XCordinate, piece3YCordinate];
+                    piece4 = tetrisBoard[piece4XCordinate, piece4YCordinate];
+
+                    tetrisBoard[piece1XCordinate, piece1YCordinate] = null;
+                    tetrisBoard[piece3XCordinate, piece3YCordinate] = null;
+                    tetrisBoard[piece4XCordinate, piece4YCordinate] = null;
+
+                    piece1XCordinate -= 1;
+                    piece1YCordinate -= 1;
+                    piece3XCordinate += 1;
+                    piece3YCordinate += 1;
+                    piece4XCordinate += 2;
+
+                    tetrisBoard[piece1XCordinate, piece1YCordinate] = piece1;
+                    tetrisBoard[piece3XCordinate, piece3YCordinate] = piece3;
+                    tetrisBoard[piece4XCordinate, piece4YCordinate] = piece4;
+
+                    piece1 = null;
+                    piece2 = null;
+                    piece3 = null;
+                    piece4 = null;
                 }
                 else if (Rotate % 4 == 3 && tetrisBoard[piece3XCordinate, piece3YCordinate].y <= BottomWall.y - 40 
                     && tetrisBoard[piece4XCordinate, piece4YCordinate].y <= BottomWall.y - 60)
@@ -885,6 +983,33 @@ namespace UWP_Tetris
                     tetrisBoard[piece3XCordinate, piece3YCordinate].y += 20;
                     tetrisBoard[piece4XCordinate, piece4YCordinate].x += -20;
                     tetrisBoard[piece4XCordinate, piece4YCordinate].y += 40;
+
+                    piece1 = tetrisBoard[piece1XCordinate, piece1YCordinate];
+                    piece2 = tetrisBoard[piece2XCordinate, piece2YCordinate];
+                    piece3 = tetrisBoard[piece3XCordinate, piece3YCordinate];
+                    piece4 = tetrisBoard[piece4XCordinate, piece4YCordinate];
+
+                    tetrisBoard[piece1XCordinate, piece1YCordinate] = null;
+                    tetrisBoard[piece2XCordinate, piece2YCordinate] = null;
+                    tetrisBoard[piece3XCordinate, piece3YCordinate] = null;
+                    tetrisBoard[piece4XCordinate, piece4YCordinate] = null;
+
+                    piece1YCordinate -= 1;
+                    piece2YCordinate -= 1;
+                    piece3XCordinate -= 4;
+                    piece3YCordinate += 2;
+                    piece4XCordinate -= 1;
+                    piece4YCordinate += 2;
+
+                    tetrisBoard[piece1XCordinate, piece1YCordinate] = piece1;
+                    tetrisBoard[piece2XCordinate, piece2YCordinate] = piece2;
+                    tetrisBoard[piece3XCordinate, piece3YCordinate] = piece3;
+                    tetrisBoard[piece4XCordinate, piece4YCordinate] = piece4;
+
+                    piece1 = null;
+                    piece2 = null;
+                    piece3 = null;
+                    piece4 = null;
                 }
             }
             //testing for the J piece // IT WORKSSSSS THIS ONE TOOK SO LONG!! 
@@ -899,6 +1024,30 @@ namespace UWP_Tetris
                     tetrisBoard[piece3XCordinate, piece3YCordinate].y += -40;
                     tetrisBoard[piece4XCordinate, piece4YCordinate].x += 60;
                     tetrisBoard[piece4XCordinate, piece4YCordinate].y += -20;
+
+                    piece2 = tetrisBoard[piece2XCordinate, piece2YCordinate];
+                    piece3 = tetrisBoard[piece3XCordinate, piece3YCordinate];
+                    piece4 = tetrisBoard[piece4XCordinate, piece4YCordinate];
+
+                    tetrisBoard[piece2XCordinate, piece2YCordinate] = null;
+                    tetrisBoard[piece3XCordinate, piece3YCordinate] = null;
+                    tetrisBoard[piece4XCordinate, piece4YCordinate] = null;
+
+                    piece2XCordinate += 1;
+                    piece2YCordinate -= 1;
+                    piece3XCordinate += 2;
+                    piece3YCordinate -= 2;
+                    piece4XCordinate += 3;
+                    piece4YCordinate -= 1;
+
+                    tetrisBoard[piece2XCordinate, piece2YCordinate] = piece2;
+                    tetrisBoard[piece3XCordinate, piece3YCordinate] = piece3;
+                    tetrisBoard[piece4XCordinate, piece4YCordinate] = piece4;
+
+                    piece1 = null;
+                    piece2 = null;
+                    piece3 = null;
+                    piece4 = null;
                 }
                 else if (Rotate % 4 == 1 && tetrisBoard[piece1XCordinate, piece1YCordinate].y <= BottomWall.y - 60 
                     && tetrisBoard[piece2XCordinate, piece2YCordinate].y <= BottomWall.y - 40)
@@ -910,6 +1059,33 @@ namespace UWP_Tetris
                     tetrisBoard[piece3XCordinate, piece3YCordinate].x += -40;
                     tetrisBoard[piece4XCordinate, piece4YCordinate].x += -20;
                     tetrisBoard[piece4XCordinate, piece4YCordinate].y += -20;
+
+                    piece1 = tetrisBoard[piece1XCordinate, piece1YCordinate];
+                    piece2 = tetrisBoard[piece2XCordinate, piece2YCordinate];
+                    piece3 = tetrisBoard[piece3XCordinate, piece3YCordinate];
+                    piece4 = tetrisBoard[piece4XCordinate, piece4YCordinate];
+
+                    tetrisBoard[piece1XCordinate, piece1YCordinate] = null;
+                    tetrisBoard[piece2XCordinate, piece2YCordinate] = null;
+                    tetrisBoard[piece3XCordinate, piece3YCordinate] = null;
+                    tetrisBoard[piece4XCordinate, piece4YCordinate] = null;
+
+                    piece1YCordinate += 2;
+                    piece2XCordinate -= 1;
+                    piece2YCordinate += 1;
+                    piece3XCordinate -= 2;
+                    piece4XCordinate -= 1;
+                    piece4YCordinate -= 1;
+
+                    tetrisBoard[piece1XCordinate, piece1YCordinate] = piece1;
+                    tetrisBoard[piece2XCordinate, piece2YCordinate] = piece2;
+                    tetrisBoard[piece3XCordinate, piece3YCordinate] = piece3;
+                    tetrisBoard[piece4XCordinate, piece4YCordinate] = piece4;
+
+                    piece1 = null;
+                    piece2 = null;
+                    piece3 = null;
+                    piece4 = null;
                 }
                 else if (Rotate % 4 == 2 
                     && tetrisBoard[piece4XCordinate, piece4YCordinate].x <= RightWall.x - 30 
@@ -921,6 +1097,32 @@ namespace UWP_Tetris
                     tetrisBoard[piece2XCordinate, piece2YCordinate].x += 20;
                     tetrisBoard[piece3XCordinate, piece3YCordinate].y += 20;
                     tetrisBoard[piece4XCordinate, piece4YCordinate].x += -20;
+
+                    piece1 = tetrisBoard[piece1XCordinate, piece1YCordinate];
+                    piece2 = tetrisBoard[piece2XCordinate, piece2YCordinate];
+                    piece3 = tetrisBoard[piece3XCordinate, piece3YCordinate];
+                    piece4 = tetrisBoard[piece4XCordinate, piece4YCordinate];
+
+                    tetrisBoard[piece1XCordinate, piece1YCordinate] = null;
+                    tetrisBoard[piece2XCordinate, piece2YCordinate] = null;
+                    tetrisBoard[piece3XCordinate, piece3YCordinate] = null;
+                    tetrisBoard[piece4XCordinate, piece4YCordinate] = null;
+
+                    piece1XCordinate += 2;
+                    piece1YCordinate -= 1;
+                    piece2XCordinate += 1;
+                    piece3YCordinate += 1;
+                    piece4XCordinate -= 1;
+
+                    tetrisBoard[piece1XCordinate, piece1YCordinate] = piece1;
+                    tetrisBoard[piece2XCordinate, piece2YCordinate] = piece2;
+                    tetrisBoard[piece3XCordinate, piece3YCordinate] = piece3;
+                    tetrisBoard[piece4XCordinate, piece4YCordinate] = piece4;
+
+                    piece1 = null;
+                    piece2 = null;
+                    piece3 = null;
+                    piece4 = null;
                 }
                 else if (Rotate % 4 == 3 
                     && tetrisBoard[piece2XCordinate, piece2YCordinate].x >= LeftWall.x + 50 
@@ -934,6 +1136,33 @@ namespace UWP_Tetris
                     tetrisBoard[piece3XCordinate, piece3YCordinate].y += 20;
                     tetrisBoard[piece4XCordinate, piece4YCordinate].x += -20;
                     tetrisBoard[piece4XCordinate, piece4YCordinate].y += 40;
+
+                    piece1 = tetrisBoard[piece1XCordinate, piece1YCordinate];
+                    piece2 = tetrisBoard[piece2XCordinate, piece2YCordinate];
+                    piece3 = tetrisBoard[piece3XCordinate, piece3YCordinate];
+                    piece4 = tetrisBoard[piece4XCordinate, piece4YCordinate];
+
+                    tetrisBoard[piece1XCordinate, piece1YCordinate] = null;
+                    tetrisBoard[piece2XCordinate, piece2YCordinate] = null;
+                    tetrisBoard[piece3XCordinate, piece3YCordinate] = null;
+                    tetrisBoard[piece4XCordinate, piece4YCordinate] = null;
+
+                    piece1XCordinate -= 2;
+                    piece1YCordinate -= 1;
+                    piece2XCordinate -= 1;
+                    piece3YCordinate += 1;
+                    piece4XCordinate -= 1;
+                    piece4YCordinate += 2;
+
+                    tetrisBoard[piece1XCordinate, piece1YCordinate] = piece1;
+                    tetrisBoard[piece2XCordinate, piece2YCordinate] = piece2;
+                    tetrisBoard[piece3XCordinate, piece3YCordinate] = piece3;
+                    tetrisBoard[piece4XCordinate, piece4YCordinate] = piece4;
+
+                    piece1 = null;
+                    piece2 = null;
+                    piece3 = null;
+                    piece4 = null;
                 }
                 
             }
@@ -950,6 +1179,33 @@ namespace UWP_Tetris
                     tetrisBoard[piece3XCordinate, piece3YCordinate].x += -20;
                     tetrisBoard[piece3XCordinate, piece3YCordinate].y += 40;
                     tetrisBoard[piece4XCordinate, piece4YCordinate].x += -20;
+
+                    piece1 = tetrisBoard[piece1XCordinate, piece1YCordinate];
+                    piece2 = tetrisBoard[piece2XCordinate, piece2YCordinate];
+                    piece3 = tetrisBoard[piece3XCordinate, piece3YCordinate];
+                    piece4 = tetrisBoard[piece4XCordinate, piece4YCordinate];
+
+                    tetrisBoard[piece1XCordinate, piece1YCordinate] = null;
+                    tetrisBoard[piece2XCordinate, piece2YCordinate] = null;
+                    tetrisBoard[piece3XCordinate, piece3YCordinate] = null;
+                    tetrisBoard[piece4XCordinate, piece4YCordinate] = null;
+
+                    piece1XCordinate += 1;
+                    piece2YCordinate += 1;
+                    piece3XCordinate -= 1;
+                    piece3YCordinate += 2;
+                    piece4XCordinate -= 1;
+                    
+
+                    tetrisBoard[piece1XCordinate, piece1YCordinate] = piece1;
+                    tetrisBoard[piece2XCordinate, piece2YCordinate] = piece2;
+                    tetrisBoard[piece3XCordinate, piece3YCordinate] = piece3;
+                    tetrisBoard[piece4XCordinate, piece4YCordinate] = piece4;
+
+                    piece1 = null;
+                    piece2 = null;
+                    piece3 = null;
+                    piece4 = null;
                 }
                 else if (Rotate % 4 == 1 
                     && tetrisBoard[piece3XCordinate, piece3YCordinate].x <= RightWall.x - 30 
@@ -962,6 +1218,31 @@ namespace UWP_Tetris
                     tetrisBoard[piece3XCordinate, piece3YCordinate].y += -20;
                     tetrisBoard[piece4XCordinate, piece4YCordinate].x += 20;
                     tetrisBoard[piece4XCordinate, piece4YCordinate].y += -20;
+
+                    piece1 = tetrisBoard[piece1XCordinate, piece1YCordinate];
+                    piece3 = tetrisBoard[piece3XCordinate, piece3YCordinate];
+                    piece4 = tetrisBoard[piece4XCordinate, piece4YCordinate];
+
+                    tetrisBoard[piece1XCordinate, piece1YCordinate] = null;
+                    tetrisBoard[piece3XCordinate, piece3YCordinate] = null;
+                    tetrisBoard[piece4XCordinate, piece4YCordinate] = null;
+
+                    piece1XCordinate += 1;
+                    piece1YCordinate += 1;
+                    piece3XCordinate -= 1;
+                    piece3YCordinate -= 1;
+                    piece4XCordinate += 1;
+                    piece4YCordinate -= 1;
+
+
+                    tetrisBoard[piece1XCordinate, piece1YCordinate] = piece1;
+                    tetrisBoard[piece3XCordinate, piece3YCordinate] = piece3;
+                    tetrisBoard[piece4XCordinate, piece4YCordinate] = piece4;
+
+                    piece1 = null;
+                    piece2 = null;
+                    piece3 = null;
+                    piece4 = null;
                 }
                 else if (Rotate % 4 == 2 
                     && tetrisBoard[piece1XCordinate, piece1YCordinate].y <= BottomWall.y - 40 
@@ -973,6 +1254,33 @@ namespace UWP_Tetris
                     tetrisBoard[piece2XCordinate, piece2YCordinate].x += -20;
                     tetrisBoard[piece3XCordinate, piece3YCordinate].y += -20;
                     tetrisBoard[piece4XCordinate, piece4YCordinate].y += 20;
+
+                    piece1 = tetrisBoard[piece1XCordinate, piece1YCordinate];
+                    piece2 = tetrisBoard[piece2XCordinate, piece2YCordinate];
+                    piece3 = tetrisBoard[piece3XCordinate, piece3YCordinate];
+                    piece4 = tetrisBoard[piece4XCordinate, piece4YCordinate];
+
+                    tetrisBoard[piece1XCordinate, piece1YCordinate] = null;
+                    tetrisBoard[piece2XCordinate, piece2YCordinate] = null;
+                    tetrisBoard[piece3XCordinate, piece3YCordinate] = null;
+                    tetrisBoard[piece4XCordinate, piece4YCordinate] = null;
+
+                    piece1XCordinate -= 2;
+                    piece1YCordinate += 1;
+                    piece2XCordinate -= 1;
+                    piece3YCordinate -= 1;
+                    piece4YCordinate += 1;
+
+
+                    tetrisBoard[piece1XCordinate, piece1YCordinate] = piece1;
+                    tetrisBoard[piece2XCordinate, piece2YCordinate] = piece2;
+                    tetrisBoard[piece3XCordinate, piece3YCordinate] = piece3;
+                    tetrisBoard[piece4XCordinate, piece4YCordinate] = piece4;
+
+                    piece1 = null;
+                    piece2 = null;
+                    piece3 = null;
+                    piece4 = null;
                 }
                 else if (Rotate % 4 == 3 
                     && tetrisBoard[piece4XCordinate, piece4YCordinate].x <= RightWall.x - 30 
@@ -984,20 +1292,109 @@ namespace UWP_Tetris
                     tetrisBoard[piece2XCordinate, piece2YCordinate].x += 20;
                     tetrisBoard[piece2XCordinate, piece2YCordinate].y += -20;
                     tetrisBoard[piece3XCordinate, piece3YCordinate].x += 40;
+
+                    piece1 = tetrisBoard[piece1XCordinate, piece1YCordinate];
+                    piece2 = tetrisBoard[piece2XCordinate, piece2YCordinate];
+                    piece3 = tetrisBoard[piece3XCordinate, piece3YCordinate];
+
+                    tetrisBoard[piece1XCordinate, piece1YCordinate] = null;
+                    tetrisBoard[piece2XCordinate, piece2YCordinate] = null;
+                    tetrisBoard[piece3XCordinate, piece3YCordinate] = null;
+
+                    piece1XCordinate -= 2;
+                    piece2XCordinate += 1;
+                    piece2YCordinate -= 1;
+                    piece3XCordinate += 2;
+
+
+                    tetrisBoard[piece1XCordinate, piece1YCordinate] = piece1;
+                    tetrisBoard[piece2XCordinate, piece2YCordinate] = piece2;
+                    tetrisBoard[piece3XCordinate, piece3YCordinate] = piece3;
+
+                    piece1 = null;
+                    piece2 = null;
+                    piece3 = null;
+                    piece4 = null;
                 }
             }
         }
 
-        public void UpdateDown()
+        public bool UpdateDown()
         {
-            moveingDown++;
-            if(moveingDown%30 == 0 && tetrisBoard[piece1XCordinate, piece1YCordinate].y + 1 <= BottomWall.y -20 && tetrisBoard[piece2XCordinate, piece2YCordinate].y + 1 <= BottomWall.y -20 && tetrisBoard[piece3XCordinate, piece3YCordinate].y + 1 <= BottomWall.y -20 && tetrisBoard[piece4XCordinate, piece4YCordinate].y + 1 <= BottomWall.y -20)
+            movingDown++;
+            if(movingDown%30 == 0)
             {
-                tetrisBoard[piece1XCordinate, piece1YCordinate].moveDownward();
-                tetrisBoard[piece2XCordinate, piece2YCordinate].moveDownward();
-                tetrisBoard[piece3XCordinate, piece3YCordinate].moveDownward();
-                tetrisBoard[piece4XCordinate, piece4YCordinate].moveDownward();
+                bottomPieceY = Math.Max(piece1YCordinate, Math.Max(piece2YCordinate, Math.Max(piece3YCordinate, piece4YCordinate)));
+                if(bottomPieceY == piece1YCordinate)
+                {
+                    bottomPieceX = piece1XCordinate;
+                }
+                else if(bottomPieceY == piece2YCordinate)
+                {
+                    bottomPieceX = piece2XCordinate;
+                }
+                else if (bottomPieceY == piece3YCordinate)
+                {
+                    bottomPieceX = piece3XCordinate;
+                }
+                else if (bottomPieceY == piece4YCordinate)
+                {
+                    bottomPieceX = piece4XCordinate;
+                }
+
+                if (!(bottomPieceY + 1 == 24))
+                {
+                    if (tetrisBoard[piece1XCordinate, piece1YCordinate].y + 1 <= BottomWall.y - 20
+                        && tetrisBoard[piece2XCordinate, piece2YCordinate].y + 1 <= BottomWall.y - 20
+                        && tetrisBoard[piece3XCordinate, piece3YCordinate].y + 1 <= BottomWall.y - 20
+                        && tetrisBoard[piece4XCordinate, piece4YCordinate].y + 1 <= BottomWall.y - 20
+                        && tetrisBoard[bottomPieceX,bottomPieceY+1] == null)
+                    {
+                        tetrisBoard[piece1XCordinate, piece1YCordinate].moveDownward();
+                        tetrisBoard[piece2XCordinate, piece2YCordinate].moveDownward();
+                        tetrisBoard[piece3XCordinate, piece3YCordinate].moveDownward();
+                        tetrisBoard[piece4XCordinate, piece4YCordinate].moveDownward();
+
+                        piece1 = tetrisBoard[piece1XCordinate, piece1YCordinate];
+                        piece2 = tetrisBoard[piece2XCordinate, piece2YCordinate];
+                        piece3 = tetrisBoard[piece3XCordinate, piece3YCordinate];
+                        piece4 = tetrisBoard[piece4XCordinate, piece4YCordinate];
+
+                        tetrisBoard[piece1XCordinate, piece1YCordinate] = null;
+                        tetrisBoard[piece2XCordinate, piece2YCordinate] = null;
+                        tetrisBoard[piece3XCordinate, piece3YCordinate] = null;
+                        tetrisBoard[piece4XCordinate, piece4YCordinate] = null;
+
+                        piece1YCordinate++;
+                        piece2YCordinate++;
+                        piece3YCordinate++;
+                        piece4YCordinate++;
+
+                        tetrisBoard[piece1XCordinate, piece1YCordinate] = piece1;
+                        tetrisBoard[piece2XCordinate, piece2YCordinate] = piece2;
+                        tetrisBoard[piece3XCordinate, piece3YCordinate] = piece3;
+                        tetrisBoard[piece4XCordinate, piece4YCordinate] = piece4;
+
+                        piece1 = null;
+                        piece2 = null;
+                        piece3 = null;
+                        piece4 = null;
+
+                        return false;
+                    }
+                    else
+                    {
+                        setPiece();
+                        return true;
+                    }
+                }
+                else
+                {
+                    setPiece();
+                    return true;
+                }
             }
+            return false;
         }
         public void Update()
         {

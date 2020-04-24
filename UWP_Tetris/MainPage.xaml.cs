@@ -86,7 +86,11 @@ namespace UWP_Tetris
 
         private void Canvas_Update(ICanvasAnimatedControl sender, CanvasAnimatedUpdateEventArgs args)
         {
-            //tetris.UpdateDown();
+            if(tetris.UpdateDown())
+            {
+                tetris = new Tetris();
+                createPiece();
+            }
         }
     }
 }
