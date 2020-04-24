@@ -20,6 +20,7 @@ using Windows.Media.Playback;
 using Windows.Media.Core;
 using System.Threading;
 
+
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 //sources: https://github.com/EricCharnesky/CIS297-Winter2020/tree/master/PongExample/PongExample
 namespace UWP_Tetris
@@ -53,23 +54,29 @@ namespace UWP_Tetris
         }
         private void CanvasKeyDown(CoreWindow sender, KeyEventArgs args)
         {
-            if(args.VirtualKey == Windows.System.VirtualKey.Left)
-            {
-                tetris.MoveTetrisPiece(-20);
-            }
-            else if(args.VirtualKey == Windows.System.VirtualKey.Right)
-            {
-                tetris.MoveTetrisPiece(20);
-            }
-            else if (args.VirtualKey == Windows.System.VirtualKey.Space)
-            {
-                tetris.RotateTetrisPiece();
+            if (!tetris.getGameOver())
+                {
+                if (args.VirtualKey == Windows.System.VirtualKey.Left)
+                {
+                    tetris.MoveTetrisPiece(-20);
+                }
+                else if (args.VirtualKey == Windows.System.VirtualKey.Right)
+                {
+                    tetris.MoveTetrisPiece(20);
+                }
+                else if (args.VirtualKey == Windows.System.VirtualKey.Space)
+                {
+                    tetris.RotateTetrisPiece();
+                }
             }
         }
 
         private void CreatePiece()
         {
-            tetris.setPiece();
+            if (!tetris.getGameOver())
+            {
+                tetris.setPiece();
+            }
         }
 
         private void Canvas_CreateResources(CanvasAnimatedControl sender, CanvasCreateResourcesEventArgs args)
@@ -81,13 +88,18 @@ namespace UWP_Tetris
         {
             tetris.DrawPiece(args.DrawingSession);
             tetris.DrawScreen(args.DrawingSession);
+            args.DrawingSession.DrawText("Current Score:" + tetris.Getscore().ToString(), 300, 300, Colors.Gray);
         }
 
         private void Canvas_Update(ICanvasAnimatedControl sender, CanvasAnimatedUpdateEventArgs args)
         {
-            if(tetris.UpdateDown())
+            if (!tetris.getGameOver())
             {
-                CreatePiece();
+                if (tetris.UpdateDown())
+                {
+                    tetris.CheckLines();
+                    CreatePiece();
+                }
             }
         }
     }

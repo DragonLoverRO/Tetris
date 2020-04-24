@@ -1,4 +1,5 @@
 ﻿using Microsoft.Graphics.Canvas;
+using Microsoft.Graphics.Canvas.UI.Xaml;
 using Windows.UI;
 
 namespace UWP_Tetris
@@ -14,7 +15,7 @@ namespace UWP_Tetris
 
         public void Draw(CanvasDrawingSession drawingSession)
         {
-            drawingSession.DrawRectangle(x, y, width, height, color);
+            drawingSession.FillRectangle(x, y, width, height, color);
         }
     }
 }

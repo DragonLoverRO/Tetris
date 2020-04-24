@@ -9,7 +9,7 @@ using Windows.UI;
 
 namespace UWP_Tetris
 {
-    //source: https://github.com/EricCharnesky/CIS297-Winter2020/tree/master/PongExample
+    //sources: https://github.com/EricCharnesky/CIS297-Winter2020/tree/master/PongExample
     public class Tetris
     {
         private Rectangle LeftWall;
@@ -21,8 +21,8 @@ namespace UWP_Tetris
         private TetrisPiece piece3;
         private TetrisPiece piece4;
         private TetrisPiece[,] tetrisBoard = new TetrisPiece[10,24];
-        private TetrisPiece[,] tetrisBoardCopy = new TetrisPiece[10,24];
         private Random rnd = new Random();
+        private int Score;
         private int Rotate = 4;
         private int CurrentPieceMade;
         private int movingDown;
@@ -38,6 +38,7 @@ namespace UWP_Tetris
         private bool isUserPieceMovingLeftward;
         public Tetris()
         {
+            Score = 0;
             gameOver = false;
             LeftWall = new Rectangle
             {
@@ -78,327 +79,401 @@ namespace UWP_Tetris
 
         public void setPiece()
         {
-            //int CreatePiece = rnd.Next(7);
-            int CreatePiece = 1;
-            Rotate = 4;
-            CurrentPieceMade = CreatePiece;
-            movingDown = 0;
-            //O piece
-            if (CreatePiece == 0)
+            if (!gameOver)
             {
-                piece1XCordinate = 4;
-                piece1YCordinate = 0;
-                piece2XCordinate = 5;
-                piece2YCordinate = 0;
-                piece3XCordinate = 5;
-                piece3YCordinate = 1;
-                piece4XCordinate = 4;
-                piece4YCordinate = 1;
+                int CreatePiece = rnd.Next(7);
+                //int CreatePiece = 6;
+                Rotate = 4;
+                CurrentPieceMade = CreatePiece;
+                movingDown = 0;
+                //O piece
+                if (CreatePiece == 0)
+                {
+                    piece1XCordinate = 4;
+                    piece1YCordinate = 0;
+                    piece2XCordinate = 5;
+                    piece2YCordinate = 0;
+                    piece3XCordinate = 5;
+                    piece3YCordinate = 1;
+                    piece4XCordinate = 4;
+                    piece4YCordinate = 1;
 
-                tetrisBoard[piece1XCordinate, piece1YCordinate] = new TetrisPiece
+                    if (tetrisBoard[piece1XCordinate, piece1YCordinate] == null
+                        && tetrisBoard[piece2XCordinate, piece2YCordinate] == null
+                        && tetrisBoard[piece3XCordinate, piece3YCordinate] == null
+                        && tetrisBoard[piece2XCordinate, piece2YCordinate] == null)
+                    {
+                        tetrisBoard[piece1XCordinate, piece1YCordinate] = new TetrisPiece
+                        {
+                            x = 100,
+                            y = 50,
+                            width = 20,
+                            height = 20,
+                            color = Colors.Yellow
+                        };
+                        tetrisBoard[piece2XCordinate, piece2YCordinate] = new TetrisPiece
+                        {
+                            x = 120,
+                            y = 50,
+                            width = 20,
+                            height = 20,
+                            color = Colors.Yellow
+                        };
+                        tetrisBoard[piece3XCordinate, piece3YCordinate] = new TetrisPiece
+                        {
+                            x = 120,
+                            y = 70,
+                            width = 20,
+                            height = 20,
+                            color = Colors.Yellow
+                        };
+                        tetrisBoard[piece4XCordinate, piece4YCordinate] = new TetrisPiece
+                        {
+                            x = 100,
+                            y = 70,
+                            width = 20,
+                            height = 20,
+                            color = Colors.Yellow
+                        };
+                    }
+                    else
+                    {
+                        gameOver = true;
+                    }
+                }
+                //I Piece
+                else if (CreatePiece == 1)
                 {
-                    x = 100,
-                    y = 50,
-                    width = 20,
-                    height = 20,
-                    color = Colors.Yellow
-                };
-                tetrisBoard[piece2XCordinate, piece2YCordinate] = new TetrisPiece
-                {
-                    x = 120,
-                    y = 50,
-                    width = 20,
-                    height = 20,
-                    color = Colors.Yellow
-                };
-                tetrisBoard[piece3XCordinate, piece3YCordinate] = new TetrisPiece
-                {
-                    x = 120,
-                    y = 70,
-                    width = 20,
-                    height = 20,
-                    color = Colors.Yellow
-                };
-                tetrisBoard[piece4XCordinate, piece4YCordinate] = new TetrisPiece
-                {
-                    x = 100,
-                    y = 70,
-                    width = 20,
-                    height = 20,
-                    color = Colors.Yellow
-                };
-            }
-            //I Piece
-            else if (CreatePiece == 1)
-            {
-                piece1XCordinate = 4;
-                piece1YCordinate = 0;
-                piece2XCordinate = 4;
-                piece2YCordinate = 1;
-                piece3XCordinate = 4;
-                piece3YCordinate = 2;
-                piece4XCordinate = 4;
-                piece4YCordinate = 3;
+                    piece1XCordinate = 4;
+                    piece1YCordinate = 0;
+                    piece2XCordinate = 4;
+                    piece2YCordinate = 1;
+                    piece3XCordinate = 4;
+                    piece3YCordinate = 2;
+                    piece4XCordinate = 4;
+                    piece4YCordinate = 3;
 
-                tetrisBoard[piece1XCordinate, piece1YCordinate] = new TetrisPiece
+                    if (tetrisBoard[piece1XCordinate, piece1YCordinate] == null
+                        && tetrisBoard[piece2XCordinate, piece2YCordinate] == null
+                        && tetrisBoard[piece3XCordinate, piece3YCordinate] == null
+                        && tetrisBoard[piece2XCordinate, piece2YCordinate] == null)
+                    {
+                        tetrisBoard[piece1XCordinate, piece1YCordinate] = new TetrisPiece
+                        {
+                            x = 100,
+                            y = 50,
+                            width = 20,
+                            height = 20,
+                            color = Colors.Cyan
+                        };
+                        tetrisBoard[piece2XCordinate, piece2YCordinate] = new TetrisPiece
+                        {
+                            x = 100,
+                            y = 70,
+                            width = 20,
+                            height = 20,
+                            color = Colors.Cyan
+                        };
+                        tetrisBoard[piece3XCordinate, piece3YCordinate] = new TetrisPiece
+                        {
+                            x = 100,
+                            y = 90,
+                            width = 20,
+                            height = 20,
+                            color = Colors.Cyan
+                        };
+                        tetrisBoard[piece4XCordinate, piece4YCordinate] = new TetrisPiece
+                        {
+                            x = 100,
+                            y = 110,
+                            width = 20,
+                            height = 20,
+                            color = Colors.Cyan
+                        };
+                    }
+                    else
+                    {
+                        gameOver = true;
+                    }
+                }
+                //S Piece
+                else if (CreatePiece == 2)
                 {
-                    x = 100,
-                    y = 50,
-                    width = 20,
-                    height = 20,
-                    color = Colors.Cyan
-                };
-                tetrisBoard[piece2XCordinate, piece2YCordinate] = new TetrisPiece
-                {
-                    x = 100,
-                    y = 70,
-                    width = 20,
-                    height = 20,
-                    color = Colors.Cyan
-                };
-                tetrisBoard[piece3XCordinate, piece3YCordinate] = new TetrisPiece
-                {
-                    x = 100,
-                    y = 90,
-                    width = 20,
-                    height = 20,
-                    color = Colors.Cyan
-                };
-                tetrisBoard[piece4XCordinate, piece4YCordinate] = new TetrisPiece
-                {
-                    x = 100,
-                    y = 110,
-                    width = 20,
-                    height = 20,
-                    color = Colors.Cyan
-                };
-            }
-            //S Piece
-            else if (CreatePiece == 2)
-            {
-                piece1XCordinate = 3;
-                piece1YCordinate = 1;
-                piece2XCordinate = 4;
-                piece2YCordinate = 1;
-                piece3XCordinate = 4;
-                piece3YCordinate = 0;
-                piece4XCordinate = 5;
-                piece4YCordinate = 0;
+                    piece1XCordinate = 3;
+                    piece1YCordinate = 1;
+                    piece2XCordinate = 4;
+                    piece2YCordinate = 1;
+                    piece3XCordinate = 4;
+                    piece3YCordinate = 0;
+                    piece4XCordinate = 5;
+                    piece4YCordinate = 0;
 
-                tetrisBoard[piece1XCordinate, piece1YCordinate] = new TetrisPiece
-                {
-                    x = 80,
-                    y = 70,
-                    width = 20,
-                    height = 20,
-                    color = Colors.Red
-                };
-                tetrisBoard[piece2XCordinate, piece2YCordinate] = new TetrisPiece
-                {
-                    x = 100,
-                    y = 70,
-                    width = 20,
-                    height = 20,
-                    color = Colors.Red
-                };
+                    if (tetrisBoard[piece1XCordinate, piece1YCordinate] == null
+                        && tetrisBoard[piece2XCordinate, piece2YCordinate] == null
+                        && tetrisBoard[piece3XCordinate, piece3YCordinate] == null
+                        && tetrisBoard[piece2XCordinate, piece2YCordinate] == null)
+                    {
+                        tetrisBoard[piece1XCordinate, piece1YCordinate] = new TetrisPiece
+                        {
+                            x = 80,
+                            y = 70,
+                            width = 20,
+                            height = 20,
+                            color = Colors.Red
+                        };
+                        tetrisBoard[piece2XCordinate, piece2YCordinate] = new TetrisPiece
+                        {
+                            x = 100,
+                            y = 70,
+                            width = 20,
+                            height = 20,
+                            color = Colors.Red
+                        };
 
-                tetrisBoard[piece3XCordinate, piece3YCordinate] = new TetrisPiece
+                        tetrisBoard[piece3XCordinate, piece3YCordinate] = new TetrisPiece
+                        {
+                            x = 100,
+                            y = 50,
+                            width = 20,
+                            height = 20,
+                            color = Colors.Red
+                        };
+                        tetrisBoard[piece4XCordinate, piece4YCordinate] = new TetrisPiece
+                        {
+                            x = 120,
+                            y = 50,
+                            width = 20,
+                            height = 20,
+                            color = Colors.Red
+                        };
+                    }
+                    else
+                    {
+                        gameOver = true;
+                    }
+                }
+                //Z Piece
+                else if (CreatePiece == 3)
                 {
-                    x = 100,
-                    y = 50,
-                    width = 20,
-                    height = 20,
-                    color = Colors.Red
-                };
-                tetrisBoard[piece4XCordinate, piece4YCordinate] = new TetrisPiece
-                {
-                    x = 120,
-                    y = 50,
-                    width = 20,
-                    height = 20,
-                    color = Colors.Red
-                };
-            }
-            //Z Piece
-            else if (CreatePiece == 3)
-            {
-                piece1XCordinate = 4;
-                piece1YCordinate = 0;
-                piece2XCordinate = 5;
-                piece2YCordinate = 0;
-                piece3XCordinate = 5;
-                piece3YCordinate = 1;
-                piece4XCordinate = 6;
-                piece4YCordinate = 1;
+                    piece1XCordinate = 4;
+                    piece1YCordinate = 0;
+                    piece2XCordinate = 5;
+                    piece2YCordinate = 0;
+                    piece3XCordinate = 5;
+                    piece3YCordinate = 1;
+                    piece4XCordinate = 6;
+                    piece4YCordinate = 1;
 
-                tetrisBoard[piece1XCordinate, piece1YCordinate] = new TetrisPiece
-                {
-                    x = 100,
-                    y = 50,
-                    width = 20,
-                    height = 20,
-                    color = Colors.Green
-                };
-                tetrisBoard[piece2XCordinate, piece2YCordinate] = new TetrisPiece
-                {
-                    x = 120,
-                    y = 50,
-                    width = 20,
-                    height = 20,
-                    color = Colors.Green
-                };
-                tetrisBoard[piece3XCordinate, piece3YCordinate] = new TetrisPiece
-                {
-                    x = 120,
-                    y = 70,
-                    width = 20,
-                    height = 20,
-                    color = Colors.Green
-                };
-                tetrisBoard[piece4XCordinate, piece4YCordinate] = new TetrisPiece
-                {
-                    x = 140,
-                    y = 70,
-                    width = 20,
-                    height = 20,
-                    color = Colors.Green
-                };
 
-            }
-            //L Piece
-            else if (CreatePiece == 4)
-            {
-                piece1XCordinate = 4;
-                piece1YCordinate = 0;
-                piece2XCordinate = 4;
-                piece2YCordinate = 1;
-                piece3XCordinate = 4;
-                piece3YCordinate = 2;
-                piece4XCordinate = 5;
-                piece4YCordinate = 2;
+                    if (tetrisBoard[piece1XCordinate, piece1YCordinate] == null
+                        && tetrisBoard[piece2XCordinate, piece2YCordinate] == null
+                        && tetrisBoard[piece3XCordinate, piece3YCordinate] == null
+                        && tetrisBoard[piece2XCordinate, piece2YCordinate] == null)
+                    {
+                        tetrisBoard[piece1XCordinate, piece1YCordinate] = new TetrisPiece
+                        {
+                            x = 100,
+                            y = 50,
+                            width = 20,
+                            height = 20,
+                            color = Colors.Green
+                        };
+                        tetrisBoard[piece2XCordinate, piece2YCordinate] = new TetrisPiece
+                        {
+                            x = 120,
+                            y = 50,
+                            width = 20,
+                            height = 20,
+                            color = Colors.Green
+                        };
+                        tetrisBoard[piece3XCordinate, piece3YCordinate] = new TetrisPiece
+                        {
+                            x = 120,
+                            y = 70,
+                            width = 20,
+                            height = 20,
+                            color = Colors.Green
+                        };
+                        tetrisBoard[piece4XCordinate, piece4YCordinate] = new TetrisPiece
+                        {
+                            x = 140,
+                            y = 70,
+                            width = 20,
+                            height = 20,
+                            color = Colors.Green
+                        };
+                    }
+                    else
+                    {
+                        gameOver = true;
+                    }
 
-                tetrisBoard[piece1XCordinate, piece1YCordinate] = new TetrisPiece
+                }
+                //L Piece
+                else if (CreatePiece == 4)
                 {
-                    x = 100,
-                    y = 50,
-                    width = 20,
-                    height = 20,
-                    color = Colors.Orange
-                };
-                tetrisBoard[piece2XCordinate, piece2YCordinate] = new TetrisPiece
-                {
-                    x = 100,
-                    y = 70,
-                    width = 20,
-                    height = 20,
-                    color = Colors.Orange
-                };
-                tetrisBoard[piece3XCordinate, piece3YCordinate] = new TetrisPiece
-                {
-                    x = 100,
-                    y = 90,
-                    width = 20,
-                    height = 20,
-                    color = Colors.Orange
-                };
-                tetrisBoard[piece4XCordinate, piece4YCordinate] = new TetrisPiece
-                {
-                    x = 120,
-                    y = 90,
-                    width = 20,
-                    height = 20,
-                    color = Colors.Orange
-                };
-            }
-            //J Piece
-            else if (CreatePiece == 5)
-            {
-                piece1XCordinate = 4;
-                piece1YCordinate = 0;
-                piece2XCordinate = 4;
-                piece2YCordinate = 1;
-                piece3XCordinate = 4;
-                piece3YCordinate = 2;
-                piece4XCordinate = 3;
-                piece4YCordinate = 2;
+                    piece1XCordinate = 4;
+                    piece1YCordinate = 0;
+                    piece2XCordinate = 4;
+                    piece2YCordinate = 1;
+                    piece3XCordinate = 4;
+                    piece3YCordinate = 2;
+                    piece4XCordinate = 5;
+                    piece4YCordinate = 2;
 
-                tetrisBoard[piece1XCordinate, piece1YCordinate] = new TetrisPiece
+                    if (tetrisBoard[piece1XCordinate, piece1YCordinate] == null
+                        && tetrisBoard[piece2XCordinate, piece2YCordinate] == null
+                        && tetrisBoard[piece3XCordinate, piece3YCordinate] == null
+                        && tetrisBoard[piece2XCordinate, piece2YCordinate] == null)
+                    {
+                        tetrisBoard[piece1XCordinate, piece1YCordinate] = new TetrisPiece
+                        {
+                            x = 100,
+                            y = 50,
+                            width = 20,
+                            height = 20,
+                            color = Colors.Orange
+                        };
+                        tetrisBoard[piece2XCordinate, piece2YCordinate] = new TetrisPiece
+                        {
+                            x = 100,
+                            y = 70,
+                            width = 20,
+                            height = 20,
+                            color = Colors.Orange
+                        };
+                        tetrisBoard[piece3XCordinate, piece3YCordinate] = new TetrisPiece
+                        {
+                            x = 100,
+                            y = 90,
+                            width = 20,
+                            height = 20,
+                            color = Colors.Orange
+                        };
+                        tetrisBoard[piece4XCordinate, piece4YCordinate] = new TetrisPiece
+                        {
+                            x = 120,
+                            y = 90,
+                            width = 20,
+                            height = 20,
+                            color = Colors.Orange
+                        };
+                    }
+                    else
+                    {
+                        gameOver = true;
+                    }
+                }
+                //J Piece
+                else if (CreatePiece == 5)
                 {
-                    x = 100,
-                    y = 50,
-                    width = 20,
-                    height = 20,
-                    color = Colors.Pink
-                };
-                tetrisBoard[piece2XCordinate, piece2YCordinate] = new TetrisPiece
-                {
-                    x = 100,
-                    y = 70,
-                    width = 20,
-                    height = 20,
-                    color = Colors.Pink
-                };
-                tetrisBoard[piece3XCordinate, piece3YCordinate] = new TetrisPiece
-                {
-                    x = 100,
-                    y = 90,
-                    width = 20,
-                    height = 20,
-                    color = Colors.Pink
-                };
-                tetrisBoard[piece4XCordinate, piece4YCordinate] = new TetrisPiece
-                {
-                    x = 80,
-                    y = 90,
-                    width = 20,
-                    height = 20,
-                    color = Colors.Pink
-                };
-            }
-            // T piece
-            else if (CreatePiece == 6)
-            {
-                piece1XCordinate = 3;
-                piece1YCordinate = 0;
-                piece2XCordinate = 4;
-                piece2YCordinate = 0;
-                piece3XCordinate = 5;
-                piece3YCordinate = 0;
-                piece4XCordinate = 4;
-                piece4YCordinate = 1;
+                    piece1XCordinate = 4;
+                    piece1YCordinate = 0;
+                    piece2XCordinate = 4;
+                    piece2YCordinate = 1;
+                    piece3XCordinate = 4;
+                    piece3YCordinate = 2;
+                    piece4XCordinate = 3;
+                    piece4YCordinate = 2;
 
-                tetrisBoard[piece1XCordinate, piece1YCordinate] = new TetrisPiece
+                    if (tetrisBoard[piece1XCordinate, piece1YCordinate] == null
+                        && tetrisBoard[piece2XCordinate, piece2YCordinate] == null
+                        && tetrisBoard[piece3XCordinate, piece3YCordinate] == null
+                        && tetrisBoard[piece2XCordinate, piece2YCordinate] == null)
+                    {
+                        tetrisBoard[piece1XCordinate, piece1YCordinate] = new TetrisPiece
+                        {
+                            x = 100,
+                            y = 50,
+                            width = 20,
+                            height = 20,
+                            color = Colors.Pink
+                        };
+                        tetrisBoard[piece2XCordinate, piece2YCordinate] = new TetrisPiece
+                        {
+                            x = 100,
+                            y = 70,
+                            width = 20,
+                            height = 20,
+                            color = Colors.Pink
+                        };
+                        tetrisBoard[piece3XCordinate, piece3YCordinate] = new TetrisPiece
+                        {
+                            x = 100,
+                            y = 90,
+                            width = 20,
+                            height = 20,
+                            color = Colors.Pink
+                        };
+                        tetrisBoard[piece4XCordinate, piece4YCordinate] = new TetrisPiece
+                        {
+                            x = 80,
+                            y = 90,
+                            width = 20,
+                            height = 20,
+                            color = Colors.Pink
+                        };
+                    }
+                    else
+                    {
+                        gameOver = true;
+                    }
+                }
+                // T piece
+                else if (CreatePiece == 6)
                 {
-                    x = 80,
-                    y = 50,
-                    width = 20,
-                    height = 20,
-                    color = Colors.Purple
-                };
-                tetrisBoard[piece2XCordinate, piece2YCordinate] = new TetrisPiece
-                {
-                    x = 100,
-                    y = 50,
-                    width = 20,
-                    height = 20,
-                    color = Colors.Purple
-                };
-                tetrisBoard[piece3XCordinate, piece3YCordinate] = new TetrisPiece
-                {
-                    x = 120,
-                    y = 50,
-                    width = 20,
-                    height = 20,
-                    color = Colors.Purple
-                };
-                tetrisBoard[piece4XCordinate, piece4YCordinate] = new TetrisPiece
-                {
-                    x = 100,
-                    y = 70,
-                    width = 20,
-                    height = 20,
-                    color = Colors.Purple
-                };
+                    piece1XCordinate = 3;
+                    piece1YCordinate = 0;
+                    piece2XCordinate = 4;
+                    piece2YCordinate = 0;
+                    piece3XCordinate = 5;
+                    piece3YCordinate = 0;
+                    piece4XCordinate = 4;
+                    piece4YCordinate = 1;
+
+                    if (tetrisBoard[piece1XCordinate, piece1YCordinate] == null
+                        && tetrisBoard[piece2XCordinate, piece2YCordinate] == null
+                        && tetrisBoard[piece3XCordinate, piece3YCordinate] == null
+                        && tetrisBoard[piece2XCordinate, piece2YCordinate] == null)
+                    {
+                        tetrisBoard[piece1XCordinate, piece1YCordinate] = new TetrisPiece
+                        {
+                            x = 80,
+                            y = 50,
+                            width = 20,
+                            height = 20,
+                            color = Colors.Purple
+                        };
+                        tetrisBoard[piece2XCordinate, piece2YCordinate] = new TetrisPiece
+                        {
+                            x = 100,
+                            y = 50,
+                            width = 20,
+                            height = 20,
+                            color = Colors.Purple
+                        };
+                        tetrisBoard[piece3XCordinate, piece3YCordinate] = new TetrisPiece
+                        {
+                            x = 120,
+                            y = 50,
+                            width = 20,
+                            height = 20,
+                            color = Colors.Purple
+                        };
+                        tetrisBoard[piece4XCordinate, piece4YCordinate] = new TetrisPiece
+                        {
+                            x = 100,
+                            y = 70,
+                            width = 20,
+                            height = 20,
+                            color = Colors.Purple
+                        };
+                    }
+                    else
+                    {
+                        gameOver = true;
+                    }
+                }
             }
         }
 
@@ -412,11 +487,11 @@ namespace UWP_Tetris
 
         public void DrawPiece(CanvasDrawingSession drawingSession)
         {
-            for(int row = 0; row < 10; row++)
+            for (int row = 0; row < 10; row++)
             {
                 for(int column = 0; column < 24; column++)
                 {
-                    tetrisBoard[row, column]?.Draw(drawingSession);
+                    tetrisBoard[row, column]?.DrawTetrisPiece(drawingSession);
                 }
             }
         }
@@ -721,7 +796,7 @@ namespace UWP_Tetris
                         && tetrisBoard[piece2XCordinate + 1, piece2YCordinate] == null
                         && tetrisBoard[piece3XCordinate + 1, piece3YCordinate] == null)
                     {
-                        MoveLeftways(changeIntX);
+                        MoveRightways(changeIntX);
                     }
                 }
                 else if (CurrentPieceMade == 1)
@@ -1255,7 +1330,7 @@ namespace UWP_Tetris
                 if (Rotate % 4 == 0 
                     && tetrisBoard[piece1XCordinate, piece1YCordinate].y <= BottomWall.y - 40 
                     && tetrisBoard[piece4XCordinate, piece4YCordinate].y <= BottomWall.y - 40
-                    && tetrisBoard[piece1XCordinate + 1, piece1YCordinate] == null
+                    && tetrisBoard[piece1XCordinate, piece1YCordinate + 1] == null
                     && tetrisBoard[piece4XCordinate - 2, piece4YCordinate + 1] == null)
                 {
                     Rotate++;
@@ -1282,7 +1357,7 @@ namespace UWP_Tetris
                     piece4 = null;
                 }
                 else if (Rotate % 4 == 1 && tetrisBoard[piece2XCordinate, piece2YCordinate].x <= RightWall.x - 30
-                    && tetrisBoard[piece1XCordinate - 1, piece1YCordinate] == null
+                    && tetrisBoard[piece1XCordinate , piece1YCordinate - 1] == null
                     && tetrisBoard[piece4XCordinate + 2, piece4YCordinate - 1] == null)
                 {
                     Rotate++;
@@ -1311,7 +1386,7 @@ namespace UWP_Tetris
                 else if (Rotate % 4 == 2 
                     && tetrisBoard[piece1XCordinate, piece1YCordinate].y <= BottomWall.y - 40 
                     && tetrisBoard[piece4XCordinate, piece4YCordinate].y <= BottomWall.y - 40
-                    && tetrisBoard[piece1XCordinate + 1, piece1YCordinate] == null
+                    && tetrisBoard[piece1XCordinate , piece1YCordinate + 1] == null
                     && tetrisBoard[piece4XCordinate - 2, piece4YCordinate + 1] == null)
                 {
                     Rotate++;
@@ -1338,7 +1413,7 @@ namespace UWP_Tetris
                     piece4 = null;
                 }
                 else if (Rotate % 4 == 3 && tetrisBoard[piece2XCordinate, piece2YCordinate].x <= RightWall.x - 30
-                    && tetrisBoard[piece1XCordinate - 1, piece1YCordinate] == null
+                    && tetrisBoard[piece1XCordinate , piece1YCordinate - 1] == null
                     && tetrisBoard[piece4XCordinate + 2, piece4YCordinate - 1] == null)
                 {
                     Rotate++;
@@ -1849,7 +1924,7 @@ namespace UWP_Tetris
         public bool UpdateDown()
         {
             movingDown++;
-            if (movingDown % 5 == 0)
+            if (movingDown % 10 == 0)
             {
                 if (CurrentPieceMade == 0)
                 {
@@ -1866,7 +1941,6 @@ namespace UWP_Tetris
                     }
                     else
                     {
-                        CheckLines();
                         return true;
                     }
                 }
@@ -1886,7 +1960,6 @@ namespace UWP_Tetris
                         }
                         else
                         {
-                            CheckLines();
                             return true;
                         }
                     }
@@ -1907,7 +1980,6 @@ namespace UWP_Tetris
                         }
                         else
                         {
-                            CheckLines();
                             return true;
                         }
                     }
@@ -1935,7 +2007,6 @@ namespace UWP_Tetris
                         }
                         else
                         {
-                            CheckLines();
                             return true;
                         }
                     }
@@ -1954,7 +2025,6 @@ namespace UWP_Tetris
                         }
                         else
                         {
-                            CheckLines();
                             return true;
                         }
                     }
@@ -1982,7 +2052,6 @@ namespace UWP_Tetris
                         }
                         else
                         {
-                            CheckLines();
                             return true;
                         }
                     }
@@ -2001,13 +2070,11 @@ namespace UWP_Tetris
                         }
                         else
                         {
-                            CheckLines();
                             return true;
                         }
                     }
                     else
                     {
-                        CheckLines();
                         return true;
                     }
                 }
@@ -2028,7 +2095,6 @@ namespace UWP_Tetris
                         }
                         else
                         {
-                            CheckLines();
                             return true;
                         }
                     }
@@ -2048,7 +2114,6 @@ namespace UWP_Tetris
                         }
                         else
                         {
-                            CheckLines();
                             return true;
                         }
                     }
@@ -2067,7 +2132,6 @@ namespace UWP_Tetris
                         }
                         else
                         {
-                            CheckLines();
                             return true;
                         }
                     }
@@ -2087,7 +2151,6 @@ namespace UWP_Tetris
                         }
                         else
                         {
-                            CheckLines();
                             return true;
                         }
                     }
@@ -2110,7 +2173,6 @@ namespace UWP_Tetris
                         }
                         else
                         {
-                            CheckLines();
                             return true;
                         }
                     }
@@ -2129,7 +2191,6 @@ namespace UWP_Tetris
                         }
                         else
                         {
-                            CheckLines();
                             return true;
                         }
                     }
@@ -2149,7 +2210,6 @@ namespace UWP_Tetris
                         }
                         else
                         {
-                            CheckLines();
                             return true;
                         }
                     }
@@ -2168,7 +2228,6 @@ namespace UWP_Tetris
                         }
                         else
                         {
-                            CheckLines();
                             return true;
                         }
                     }
@@ -2309,7 +2368,6 @@ namespace UWP_Tetris
 
             }
         }
-
         private void ShiftDown(int row)
         {
             for(int i = row; i >=0; i--)
@@ -2318,12 +2376,26 @@ namespace UWP_Tetris
                 {
                     if (i - 1 != -1)
                     {
-                        tetrisBoard[j, i] = null;
-                        tetrisBoard[j, i] = tetrisBoard[j, i - 1];
-                        tetrisBoard[j, i - 1] = null;
+                        piece1 = tetrisBoard[j, i-1];
+                        tetrisBoard[j,i] = null;
+                        tetrisBoard[j,i] = piece1;
+                        piece1 = null;
+                        tetrisBoard[j, i]?.moveDownward();
                     }
                 }
             }
+
+            Score += 10;
+        }
+
+        public int Getscore()
+        {
+            return Score;
+        }
+
+        public bool getGameOver()
+        {
+            return gameOver;
         }
     }
 }
