@@ -21,7 +21,7 @@ namespace UWP_Tetris
         private TetrisPiece piece3;
         private TetrisPiece piece4;
         private TetrisPiece[,] tetrisBoard = new TetrisPiece[10,24];
-
+        private TetrisPiece[,] tetrisBoardCopy = new TetrisPiece[10,24];
         private Random rnd = new Random();
         private int Rotate = 4;
         private int CurrentPieceMade;
@@ -79,7 +79,7 @@ namespace UWP_Tetris
         public void setPiece()
         {
             //int CreatePiece = rnd.Next(7);
-            int CreatePiece = 4;
+            int CreatePiece = 1;
             Rotate = 4;
             CurrentPieceMade = CreatePiece;
             movingDown = 0;
@@ -1691,7 +1691,9 @@ namespace UWP_Tetris
             {
                 if (Rotate % 4 == 0 
                     && tetrisBoard[piece2XCordinate, piece2YCordinate].y <= BottomWall.y - 40 
-                    && tetrisBoard[piece3XCordinate, piece3YCordinate].y <= BottomWall.y - 60)
+                    && tetrisBoard[piece3XCordinate, piece3YCordinate].y <= BottomWall.y - 60
+                    && tetrisBoard[piece1XCordinate, piece1YCordinate + 1] == null
+                    && tetrisBoard[piece4XCordinate, piece4YCordinate + 1] == null)
                 {
                     Rotate++;
                     tetrisBoard[piece1XCordinate, piece1YCordinate].x += 20;
@@ -1729,7 +1731,8 @@ namespace UWP_Tetris
                 }
                 else if (Rotate % 4 == 1 
                     && tetrisBoard[piece3XCordinate, piece3YCordinate].x <= RightWall.x - 30 
-                    && tetrisBoard[piece1XCordinate, piece1YCordinate].y <= BottomWall.y - 40)
+                    && tetrisBoard[piece1XCordinate, piece1YCordinate].y <= BottomWall.y - 40
+                    && tetrisBoard[piece2XCordinate + 1, piece2YCordinate] == null)
                 {
                     Rotate++;
                     tetrisBoard[piece1XCordinate, piece1YCordinate].x += 20;
@@ -1766,7 +1769,9 @@ namespace UWP_Tetris
                 }
                 else if (Rotate % 4 == 2 
                     && tetrisBoard[piece1XCordinate, piece1YCordinate].y <= BottomWall.y - 40 
-                    && tetrisBoard[piece4XCordinate, piece4YCordinate].y <= BottomWall.y - 40)
+                    && tetrisBoard[piece4XCordinate, piece4YCordinate].y <= BottomWall.y - 40
+                    && tetrisBoard[piece3XCordinate, piece3YCordinate - 1] == null
+                    && tetrisBoard[piece3XCordinate, piece3YCordinate + 1] == null)
                 {
                     Rotate++;
                     tetrisBoard[piece1XCordinate, piece1YCordinate].x += -40;
@@ -1805,7 +1810,9 @@ namespace UWP_Tetris
                 else if (Rotate % 4 == 3 
                     && tetrisBoard[piece4XCordinate, piece4YCordinate].x <= RightWall.x - 30 
                     && tetrisBoard[piece2XCordinate, piece2YCordinate].y <= BottomWall.y - 40 
-                    && tetrisBoard[piece3XCordinate, piece3YCordinate].y <= BottomWall.y - 60) 
+                    && tetrisBoard[piece3XCordinate, piece3YCordinate].y <= BottomWall.y - 60
+                    && tetrisBoard[piece3XCordinate + 1, piece3YCordinate] == null
+                    && tetrisBoard[piece3XCordinate + 2, piece3YCordinate] == null) 
                 {
                     Rotate++;
                     tetrisBoard[piece1XCordinate, piece1YCordinate].y += -40;
@@ -1842,7 +1849,7 @@ namespace UWP_Tetris
         public bool UpdateDown()
         {
             movingDown++;
-            if (movingDown % 15 == 0)
+            if (movingDown % 5 == 0)
             {
                 if (CurrentPieceMade == 0)
                 {
@@ -1859,7 +1866,7 @@ namespace UWP_Tetris
                     }
                     else
                     {
-                        setPiece();
+                        CheckLines();
                         return true;
                     }
                 }
@@ -1879,7 +1886,7 @@ namespace UWP_Tetris
                         }
                         else
                         {
-                            setPiece();
+                            CheckLines();
                             return true;
                         }
                     }
@@ -1900,7 +1907,7 @@ namespace UWP_Tetris
                         }
                         else
                         {
-                            setPiece();
+                            CheckLines();
                             return true;
                         }
                     }
@@ -1928,7 +1935,7 @@ namespace UWP_Tetris
                         }
                         else
                         {
-                            setPiece();
+                            CheckLines();
                             return true;
                         }
                     }
@@ -1947,7 +1954,7 @@ namespace UWP_Tetris
                         }
                         else
                         {
-                            setPiece();
+                            CheckLines();
                             return true;
                         }
                     }
@@ -1975,7 +1982,7 @@ namespace UWP_Tetris
                         }
                         else
                         {
-                            setPiece();
+                            CheckLines();
                             return true;
                         }
                     }
@@ -1994,13 +2001,13 @@ namespace UWP_Tetris
                         }
                         else
                         {
-                            setPiece();
+                            CheckLines();
                             return true;
                         }
                     }
                     else
                     {
-                        setPiece();
+                        CheckLines();
                         return true;
                     }
                 }
@@ -2021,7 +2028,7 @@ namespace UWP_Tetris
                         }
                         else
                         {
-                            setPiece();
+                            CheckLines();
                             return true;
                         }
                     }
@@ -2041,7 +2048,7 @@ namespace UWP_Tetris
                         }
                         else
                         {
-                            setPiece();
+                            CheckLines();
                             return true;
                         }
                     }
@@ -2060,7 +2067,7 @@ namespace UWP_Tetris
                         }
                         else
                         {
-                            setPiece();
+                            CheckLines();
                             return true;
                         }
                     }
@@ -2080,7 +2087,7 @@ namespace UWP_Tetris
                         }
                         else
                         {
-                            setPiece();
+                            CheckLines();
                             return true;
                         }
                     }
@@ -2103,7 +2110,7 @@ namespace UWP_Tetris
                         }
                         else
                         {
-                            setPiece();
+                            CheckLines();
                             return true;
                         }
                     }
@@ -2122,7 +2129,7 @@ namespace UWP_Tetris
                         }
                         else
                         {
-                            setPiece();
+                            CheckLines();
                             return true;
                         }
                     }
@@ -2142,7 +2149,7 @@ namespace UWP_Tetris
                         }
                         else
                         {
-                            setPiece();
+                            CheckLines();
                             return true;
                         }
                     }
@@ -2161,7 +2168,7 @@ namespace UWP_Tetris
                         }
                         else
                         {
-                            setPiece();
+                            CheckLines();
                             return true;
                         }
                     }
@@ -2276,6 +2283,47 @@ namespace UWP_Tetris
             piece2 = null;
             piece3 = null;
             piece4 = null;
+        }
+
+        public void CheckLines()
+        {
+            int tracker = 0;
+            for (int row = 0; row < 24; row++)
+            {
+                tracker = 0;
+                for (int column = 0; column < 10; column++)
+                {
+                    
+                    if (!(tetrisBoard[column,row] == null))
+                    {
+                        tracker++;
+                    }
+
+                    if(tracker == 10)
+                    {
+                        ShiftDown(row);
+                        column = -1;
+                        tracker = 0;
+                    }
+                }
+
+            }
+        }
+
+        private void ShiftDown(int row)
+        {
+            for(int i = row; i >=0; i--)
+            {
+                for(int j = 0; j < 10; j++)
+                {
+                    if (i - 1 != -1)
+                    {
+                        tetrisBoard[j, i] = null;
+                        tetrisBoard[j, i] = tetrisBoard[j, i - 1];
+                        tetrisBoard[j, i - 1] = null;
+                    }
+                }
+            }
         }
     }
 }
