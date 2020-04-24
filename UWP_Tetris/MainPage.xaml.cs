@@ -37,8 +37,8 @@ namespace UWP_Tetris
             tetris = new Tetris();
             //player = new MediaPlayer();
             //playmusic(player);
-            createPiece();
-            Window.Current.CoreWindow.KeyDown += canvasKeyDown;
+            CreatePiece();
+            Window.Current.CoreWindow.KeyDown += CanvasKeyDown;
         }
         //mediaplayer code taken from https://www.youtube.com/watch?v=hPxExtLCMK0
         //song is The Swords of Ditto theme song edited for looping
@@ -51,7 +51,7 @@ namespace UWP_Tetris
             player.Play();
             player.IsLoopingEnabled = true;
         }
-        private void canvasKeyDown(CoreWindow sender, KeyEventArgs args)
+        private void CanvasKeyDown(CoreWindow sender, KeyEventArgs args)
         {
             if(args.VirtualKey == Windows.System.VirtualKey.Left)
             {
@@ -67,10 +67,9 @@ namespace UWP_Tetris
             }
         }
 
-        private void createPiece()
+        private void CreatePiece()
         {
             tetris.setPiece();
-            
         }
 
         private void Canvas_CreateResources(CanvasAnimatedControl sender, CanvasCreateResourcesEventArgs args)
@@ -81,15 +80,14 @@ namespace UWP_Tetris
         private void Canvas_Draw(ICanvasAnimatedControl sender, CanvasAnimatedDrawEventArgs args)
         {
             tetris.DrawPiece(args.DrawingSession);
-            tetris.drawScreen(args.DrawingSession);
+            tetris.DrawScreen(args.DrawingSession);
         }
 
         private void Canvas_Update(ICanvasAnimatedControl sender, CanvasAnimatedUpdateEventArgs args)
         {
             if(tetris.UpdateDown())
             {
-                tetris = new Tetris();
-                createPiece();
+                CreatePiece();
             }
         }
     }
