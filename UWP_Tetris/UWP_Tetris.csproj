@@ -119,18 +119,12 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="credits.xaml.cs">
       <DependentUpon>credits.xaml</DependentUpon>
     </Compile>
     <Compile Include="Instructions.xaml.cs">
       <DependentUpon>Instructions.xaml</DependentUpon>
     </Compile>
-    <Compile Include="titlepage.xaml.cs">
-      <DependentUpon>titlepage.xaml</DependentUpon>
-    </Compile>
-=======
->>>>>>> 26a67a9b795cd4e65457c46b9f27c2046fa76775
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -149,8 +143,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\arrowkeys.png" />
+    <Content Include="Assets\CUTEBOI.png" />
     <Content Include="Assets\spacebar.png" />
     <Content Include="Assets\swordsofdittoloopish.mp3" />
+    <Content Include="Assets\tinyboy.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -165,20 +161,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-<<<<<<< HEAD
     <Page Include="credits.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Instructions.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="titlepage.xaml">
       <SubType>Designer</SubType>
-=======
+    </Page>
     <Page Include="MainPage.xaml">
->>>>>>> 26a67a9b795cd4e65457c46b9f27c2046fa76775
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

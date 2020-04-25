@@ -8,12 +8,17 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Background="Black">
+    <Grid x:Name="howtoplay1" Background="Black">
         <TextBlock HorizontalAlignment="Left" Margin="208,73,0,0" Text="IT SURE IS TETRIS!" TextWrapping="Wrap" VerticalAlignment="Top" Height="155" Width="911" FocusVisualPrimaryBrush="#FFFFFA1F" Foreground="#FFFFEE0A" FontSize="100" FontWeight="Bold"/>
         <Button x:Name="howtoplay" Content="HOW TO PLAY" Margin="165,569,0,0" VerticalAlignment="Top" Height="80" Width="312" Background="{x:Null}" Foreground="Cyan" FontSize="40" FontWeight="Bold" Click="howtoplay_Click" PointerMoved="howtoplay_PointerMoved" PointerExited="howtoplay_PointerExited"/>
         <Button Content="CREDITS" Margin="811,569,0,0" VerticalAlignment="Top" Height="72" Width="289" FontSize="40" Foreground="#FFFF910E" FontWeight="Bold" PointerMoved="Button_PointerMoved" PointerExited="Button_PointerExited" Click="Button_Click"/>
         <TextBlock x:Name="dontworrybox" HorizontalAlignment="Center" Margin="0,206,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="51" Width="487" Foreground="White" FontSize="30" TextAlignment="Center"/>
         <Button x:Name="playbutton" Content="GET TO PLAYIN'" Margin="0,290,0,0" VerticalAlignment="Top" Height="218" Width="487" Foreground="Black" FocusVisualSecondaryBrush="White" FocusVisualPrimaryBrush="White" BorderBrush="#FF176D15" Background="#FF74FF00" FontSize="60" FontWeight="Bold" HorizontalAlignment="Center" Click="playbutton_Click" PointerMoved="playbutton_PointerMoved" PointerExited="playbutton_PointerExited"/>
-
+        <Image HorizontalAlignment="Left" Height="398" Margin="955,171,0,0" VerticalAlignment="Top" Width="360" Source="/Assets/tinyboy.png"/>
+        <Image HorizontalAlignment="Left" Height="398" Margin="-38,170,0,0" VerticalAlignment="Top" Width="414" Source="/Assets/tinyboy.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <CompositeTransform ScaleX="-1"/>
+            </Image.RenderTransform>
+        </Image>
     </Grid>
 </Page>

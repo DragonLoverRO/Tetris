@@ -10,9 +10,10 @@
 
     <Grid Background="Black">
         <TextBlock HorizontalAlignment="Left" Margin="370,45,0,0" Text="CREDITS" TextWrapping="Wrap" VerticalAlignment="Top" Height="104" Width="510" Foreground="#FFFF910E" FontSize="69" FontWeight="Bold" TextAlignment="Center"/>
-        <Button Content="TAKE ME BACK" Margin="0,564,0,0" VerticalAlignment="Top" Height="117" Width="327" HorizontalAlignment="Center" Background="#FFFFEE0A" FontSize="35" FontWeight="Bold" Click="Button_Click"/>
-        <TextBlock x:Name="creditsbox" HorizontalAlignment="Left" Margin="253,152,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="374" Width="765" FocusVisualPrimaryBrush="White" FontSize="25" FontWeight="Bold" Foreground="White"/>
+        <Button x:ConnectionId='2' Content="TAKE ME BACK" Margin="0,564,0,0" VerticalAlignment="Top" Height="117" Width="327" HorizontalAlignment="Center" Background="#FFFFEE0A" FontSize="35" FontWeight="Bold"                     />
+        <TextBlock x:ConnectionId='3' x:Name="creditsbox" HorizontalAlignment="Left" Margin="253,152,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="374" Width="765" FocusVisualPrimaryBrush="White" FontSize="25" FontWeight="Bold" Foreground="White"/>
         <Image HorizontalAlignment="Left" Height="398" Margin="824,169,0,0" VerticalAlignment="Top" Width="360" Source="/Assets/CUTEBOI.png"/>
 
     </Grid>
 </Page>
+

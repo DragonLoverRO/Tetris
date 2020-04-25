@@ -30,21 +30,13 @@
     <AppXManifest Include="C:\Users\malka\Desktop\UWP_Tetris\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-<<<<<<< HEAD
-      <Modified>2020-04-25T01:07:35.638</Modified>
-=======
-      <Modified>2020-04-25T00:18:26.517</Modified>
->>>>>>> 26a67a9b795cd4e65457c46b9f27c2046fa76775
+      <Modified>2020-04-25T03:22:16.539</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\bin\x86\Debug\UWP_Tetris.exe">
       <PackagePath>entrypoint\UWP_Tetris.exe</PackagePath>
-<<<<<<< HEAD
-      <Modified>2020-04-25T01:07:35.060</Modified>
-=======
-      <Modified>2020-04-25T00:18:26.160</Modified>
->>>>>>> 26a67a9b795cd4e65457c46b9f27c2046fa76775
+      <Modified>2020-04-25T03:22:16.136</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.9\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -62,23 +54,21 @@
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2019-03-18T23:36:56.000</Modified>
     </AppxPackagedFile>
-<<<<<<< HEAD
-    <AppxPackagedFile Include="C:\Users\drama\Documents\GitHub\Tetris\UWP_Tetris\Assets\arrowkeys.png">
+    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\Assets\arrowkeys.png">
       <PackagePath>Assets\arrowkeys.png</PackagePath>
-      <Modified>2020-04-25T00:24:44.506</Modified>
+      <Modified>2020-04-25T01:29:52.375</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\drama\Documents\GitHub\Tetris\UWP_Tetris\Assets\spacebar.png">
+    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\Assets\CUTEBOI.png">
+      <PackagePath>Assets\CUTEBOI.png</PackagePath>
+      <Modified>2020-04-25T03:19:37.338</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\Assets\spacebar.png">
       <PackagePath>Assets\spacebar.png</PackagePath>
-      <Modified>2020-04-25T00:30:47.531</Modified>
-=======
-    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\Assets\swordsofdittoloopish.mp3">
-      <PackagePath>Assets\swordsofdittoloopish.mp3</PackagePath>
-      <Modified>2020-04-23T03:47:06.716</Modified>
+      <Modified>2020-04-25T01:29:59.297</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2020-04-23T03:47:06.719</Modified>
->>>>>>> 26a67a9b795cd4e65457c46b9f27c2046fa76775
+    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\Assets\tinyboy.png">
+      <PackagePath>Assets\tinyboy.png</PackagePath>
+      <Modified>2020-04-25T02:52:33.558</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -114,55 +104,37 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-04-23T03:47:06.705</Modified>
     </AppxPackagedFile>
-<<<<<<< HEAD
-    <AppxPackagedFile Include="C:\Users\drama\Documents\GitHub\Tetris\UWP_Tetris\Assets\swordsofdittoloopish.mp3">
+    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\Assets\swordsofdittoloopish.mp3">
       <PackagePath>Assets\swordsofdittoloopish.mp3</PackagePath>
-      <Modified>2020-04-24T21:57:26.942</Modified>
+      <Modified>2020-04-23T03:47:06.716</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\drama\Documents\GitHub\Tetris\UWP_Tetris\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2020-04-24T21:57:26.947</Modified>
+      <Modified>2020-04-23T03:47:06.719</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\drama\Documents\GitHub\Tetris\UWP_Tetris\bin\x86\Debug\UWP_Tetris.xr.xml">
-      <PackagePath>UWP_Tetris.xr.xml</PackagePath>
-      <Modified>2020-04-25T00:51:25.766</Modified>
-=======
     <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\bin\x86\Debug\UWP_Tetris.xr.xml">
       <PackagePath>UWP_Tetris.xr.xml</PackagePath>
-      <Modified>2020-04-25T00:15:43.517</Modified>
->>>>>>> 26a67a9b795cd4e65457c46b9f27c2046fa76775
+      <Modified>2020-04-25T03:22:15.939</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-<<<<<<< HEAD
-      <Modified>2020-04-25T01:07:34.829</Modified>
+      <Modified>2020-04-25T03:22:15.949</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\drama\Documents\GitHub\Tetris\UWP_Tetris\bin\x86\Debug\credits.xbf">
+    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\bin\x86\Debug\credits.xbf">
       <PackagePath>credits.xbf</PackagePath>
-      <Modified>2020-04-25T01:07:34.829</Modified>
+      <Modified>2020-04-25T03:22:15.949</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\drama\Documents\GitHub\Tetris\UWP_Tetris\bin\x86\Debug\Instructions.xbf">
+    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\bin\x86\Debug\Instructions.xbf">
       <PackagePath>Instructions.xbf</PackagePath>
-      <Modified>2020-04-25T01:07:34.830</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\drama\Documents\GitHub\Tetris\UWP_Tetris\bin\x86\Debug\titlepage.xbf">
-      <PackagePath>titlepage.xbf</PackagePath>
-      <Modified>2020-04-25T01:07:34.830</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\drama\Documents\GitHub\Tetris\UWP_Tetris\bin\x86\Debug\MainPage.xbf">
-      <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2020-04-25T01:07:34.830</Modified>
-=======
-      <Modified>2020-04-25T00:18:25.981</Modified>
+      <Modified>2020-04-25T03:22:15.949</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2020-04-25T00:18:25.981</Modified>
+      <Modified>2020-04-25T03:22:15.950</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\bin\x86\Debug\titlepage.xbf">
       <PackagePath>titlepage.xbf</PackagePath>
-      <Modified>2020-04-25T00:18:25.981</Modified>
->>>>>>> 26a67a9b795cd4e65457c46b9f27c2046fa76775
+      <Modified>2020-04-25T03:22:15.950</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -170,19 +142,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-<<<<<<< HEAD
-      <Modified>2020-04-25T00:51:26.346</Modified>
-=======
-      <Modified>2020-04-25T00:15:44.101</Modified>
->>>>>>> 26a67a9b795cd4e65457c46b9f27c2046fa76775
+      <Modified>2020-04-25T03:21:15.713</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\bin\x86\Debug\Core\UWP_Tetris.exe">
       <PackagePath>UWP_Tetris.exe</PackagePath>
-<<<<<<< HEAD
-      <Modified>2020-04-25T01:07:35.631</Modified>
-=======
-      <Modified>2020-04-25T00:18:26.513</Modified>
->>>>>>> 26a67a9b795cd4e65457c46b9f27c2046fa76775
+      <Modified>2020-04-25T03:22:16.536</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

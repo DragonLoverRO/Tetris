@@ -40,19 +40,17 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.18362.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
     </AppxPackagedFile>
-<<<<<<< HEAD
-    <AppxPackagedFile Include="C:\Users\drama\Documents\GitHub\Tetris\UWP_Tetris\Assets\arrowkeys.png">
+    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\Assets\arrowkeys.png">
       <PackagePath>Assets\arrowkeys.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\drama\Documents\GitHub\Tetris\UWP_Tetris\Assets\spacebar.png">
-      <PackagePath>Assets\spacebar.png</PackagePath>
-=======
-    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\Assets\swordsofdittoloopish.mp3">
-      <PackagePath>Assets\swordsofdittoloopish.mp3</PackagePath>
+    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\Assets\CUTEBOI.png">
+      <PackagePath>Assets\CUTEBOI.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
->>>>>>> 26a67a9b795cd4e65457c46b9f27c2046fa76775
+    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\Assets\spacebar.png">
+      <PackagePath>Assets\spacebar.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\Assets\tinyboy.png">
+      <PackagePath>Assets\tinyboy.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -81,36 +79,25 @@
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-<<<<<<< HEAD
-    <AppxPackagedFile Include="C:\Users\drama\Documents\GitHub\Tetris\UWP_Tetris\Assets\swordsofdittoloopish.mp3">
+    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\Assets\swordsofdittoloopish.mp3">
       <PackagePath>Assets\swordsofdittoloopish.mp3</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\drama\Documents\GitHub\Tetris\UWP_Tetris\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\drama\Documents\GitHub\Tetris\UWP_Tetris\bin\x86\Debug\UWP_Tetris.xr.xml">
-=======
     <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\bin\x86\Debug\UWP_Tetris.xr.xml">
->>>>>>> 26a67a9b795cd4e65457c46b9f27c2046fa76775
       <PackagePath>UWP_Tetris.xr.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-<<<<<<< HEAD
-    <AppxPackagedFile Include="C:\Users\drama\Documents\GitHub\Tetris\UWP_Tetris\bin\x86\Debug\credits.xbf">
+    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\bin\x86\Debug\credits.xbf">
       <PackagePath>credits.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\drama\Documents\GitHub\Tetris\UWP_Tetris\bin\x86\Debug\Instructions.xbf">
+    <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\bin\x86\Debug\Instructions.xbf">
       <PackagePath>Instructions.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\drama\Documents\GitHub\Tetris\UWP_Tetris\bin\x86\Debug\titlepage.xbf">
-      <PackagePath>titlepage.xbf</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\drama\Documents\GitHub\Tetris\UWP_Tetris\bin\x86\Debug\MainPage.xbf">
-=======
     <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\bin\x86\Debug\MainPage.xbf">
->>>>>>> 26a67a9b795cd4e65457c46b9f27c2046fa76775
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\malka\Desktop\UWP_Tetris\bin\x86\Debug\titlepage.xbf">

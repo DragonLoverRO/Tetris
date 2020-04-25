@@ -4,21 +4,14 @@
     <RootType FullName="Windows.UI.Xaml.Application" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Background" />
-      <RootProperty Name="RequestedTheme" />
       <RootProperty Name="Content" />
+      <RootProperty Name="RequestedTheme" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
-      <RootProperty Name="Children" />
       <RootProperty Name="Background" />
+      <RootProperty Name="Children" />
     </RootType>
-    <RootType FullName="Microsoft.Graphics.Canvas.UI.Xaml.CanvasAnimatedControl">
-      <RootProperty Name="RequestedTheme" />
-      <RootEvent Name="Draw" />
-      <RootEvent Name="Update" />
-      <RootEvent Name="CreateResources" />
-    </RootType>
-    <RootType FullName="UWP_Tetris.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
@@ -51,7 +44,6 @@
       <RootEvent Name="PointerMoved" />
       <RootEvent Name="PointerExited" />
     </RootType>
-    <RootType FullName="UWP_Tetris.credits" />
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />
@@ -59,9 +51,22 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="Source" />
+      <RootProperty Name="RenderTransformOrigin" />
+      <RootProperty Name="RenderTransform" />
     </RootType>
+    <RootType FullName="UWP_Tetris.credits" />
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.NullExtension" />
     <RootType FullName="UWP_Tetris.Instructions" />
+    <RootType FullName="Microsoft.Graphics.Canvas.UI.Xaml.CanvasAnimatedControl">
+      <RootProperty Name="RequestedTheme" />
+      <RootEvent Name="Draw" />
+      <RootEvent Name="Update" />
+      <RootEvent Name="CreateResources" />
+    </RootType>
+    <RootType FullName="UWP_Tetris.MainPage" />
+    <RootType FullName="Windows.UI.Xaml.Media.CompositeTransform">
+      <RootProperty Name="ScaleX" />
+    </RootType>
     <RootType FullName="UWP_Tetris.titlepage" />
   </Roots.RootTypes>
 </Roots>

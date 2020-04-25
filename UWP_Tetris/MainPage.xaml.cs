@@ -36,11 +36,12 @@ namespace UWP_Tetris
         {
             this.InitializeComponent();
             tetris = new Tetris();
-            player = new MediaPlayer() { Volume = 0.5 };
+            player = new MediaPlayer() { Volume = 0.05 };
             playmusic(player);
             CreatePiece();
             Window.Current.CoreWindow.KeyDown += CanvasKeyDown;
         }
+
         //mediaplayer code taken from https://www.youtube.com/watch?v=hPxExtLCMK0
         //song is The Swords of Ditto theme song edited for looping
         //poorly edited by Dana *waves hand*
@@ -69,6 +70,11 @@ namespace UWP_Tetris
                     tetris.RotateTetrisPiece();
                 }
             }
+            if (tetris.getGameOver() && args.VirtualKey == Windows.System.VirtualKey.X)
+            {
+                player.Pause();
+                Frame.Navigate(typeof(credits));
+            }
         }
 
         private void CreatePiece()
@@ -77,22 +83,40 @@ namespace UWP_Tetris
             {
                 tetris.setPiece();
             }
+            else
+            {
+                Frame.Navigate(typeof(credits));
+            }
         }
 
         private void Canvas_CreateResources(CanvasAnimatedControl sender, CanvasCreateResourcesEventArgs args)
         {
-            
+
         }
 
         private void Canvas_Draw(ICanvasAnimatedControl sender, CanvasAnimatedDrawEventArgs args)
         {
-            tetris.DrawPiece(args.DrawingSession);
-            tetris.DrawScreen(args.DrawingSession);
-            args.DrawingSession.DrawText("Current Score:" + tetris.Getscore().ToString(), 300, 300, Colors.Gray);
+            if (!tetris.getGameOver())
+            {
+                tetris.DrawPiece(args.DrawingSession);
+                tetris.DrawScreen(args.DrawingSession);
+                args.DrawingSession.DrawText("Current Score:" + tetris.Getscore().ToString(), 300, 300, Colors.Gray);
+            }
+            else
+            {
+                var fontFormat = new Microsoft.Graphics.Canvas.Text.CanvasTextFormat
+                {
+                    FontSize = 48
+                };
+
+                args.DrawingSession.DrawText("Game Over Click X to return to the title Screen", 400, 400, Colors.Azure, fontFormat);
+            }
+
         }
 
         private void Canvas_Update(ICanvasAnimatedControl sender, CanvasAnimatedUpdateEventArgs args)
         {
+
             if (!tetris.getGameOver())
             {
                 if (tetris.UpdateDown())
@@ -101,7 +125,6 @@ namespace UWP_Tetris
                     CreatePiece();
                 }
             }
-
         }
     }
 }

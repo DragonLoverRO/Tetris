@@ -38,6 +38,13 @@ namespace UWP_Tetris
         private bool isUserPieceMovingLeftward;
         public Tetris()
         {
+            for (int row = 0; row < 10; row++)
+            {
+                for (int column = 0; column < 24; column++)
+                {
+                    tetrisBoard[row, column] = null;
+                }
+            }
             Score = 0;
             gameOver = false;
             LeftWall = new Rectangle
@@ -1924,7 +1931,7 @@ namespace UWP_Tetris
         public bool UpdateDown()
         {
             movingDown++;
-            if (movingDown % 10 == 0)
+            if (movingDown % 1 == 0)
             {
                 if (CurrentPieceMade == 0)
                 {
