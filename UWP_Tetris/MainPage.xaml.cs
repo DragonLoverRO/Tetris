@@ -85,7 +85,7 @@ namespace UWP_Tetris
             }
             else
             {
-                Frame.Navigate(typeof(credits));
+                Frame.Navigate(typeof(titlepage));
             }
         }
 
@@ -109,7 +109,7 @@ namespace UWP_Tetris
                     FontSize = 48
                 };
 
-                args.DrawingSession.DrawText("Game Over Click X to return to the title Screen", 400, 400, Colors.Azure, fontFormat);
+                args.DrawingSession.DrawText("Game Over Click X to return to the title Screen", 100, 100, Colors.Azure, fontFormat);
             }
 
         }
