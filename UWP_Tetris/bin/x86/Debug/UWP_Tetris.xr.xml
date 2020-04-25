@@ -4,14 +4,21 @@
     <RootType FullName="Windows.UI.Xaml.Application" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Background" />
-      <RootProperty Name="Content" />
       <RootProperty Name="RequestedTheme" />
+      <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
-      <RootProperty Name="Background" />
       <RootProperty Name="Children" />
+      <RootProperty Name="Background" />
     </RootType>
+    <RootType FullName="Microsoft.Graphics.Canvas.UI.Xaml.CanvasAnimatedControl">
+      <RootProperty Name="RequestedTheme" />
+      <RootEvent Name="Draw" />
+      <RootEvent Name="Update" />
+      <RootEvent Name="CreateResources" />
+    </RootType>
+    <RootType FullName="UWP_Tetris.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
@@ -46,12 +53,5 @@
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.NullExtension" />
     <RootType FullName="UWP_Tetris.titlepage" />
-    <RootType FullName="Microsoft.Graphics.Canvas.UI.Xaml.CanvasAnimatedControl">
-      <RootProperty Name="RequestedTheme" />
-      <RootEvent Name="Draw" />
-      <RootEvent Name="Update" />
-      <RootEvent Name="CreateResources" />
-    </RootType>
-    <RootType FullName="UWP_Tetris.MainPage" />
   </Roots.RootTypes>
 </Roots>

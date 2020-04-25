@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aW+HWExB6wB4I1R3UqVNqWKJeYLfx216sfqcUgV5xI2TePiD0TN48x3h0yxj3/WKQ6JicCy+YxI+FkKZXaisPw==",
+  "dgSpecHash": "2qG8PbkSlAi/cZFttcWtU5H2i7XmezwUOQe+ZKvlw+hXJOxeKKbVqs7kqOjHcswtHqtwDpKpjMTdKWhJ2hyM8w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\malka\\Documents\\GitHub\\Tetris\\UWP_Tetris\\UWP_Tetris.csproj",
+  "projectFilePath": "C:\\Users\\malka\\Desktop\\UWP_Tetris\\UWP_Tetris.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.native.compiler\\2.2.7-rel-27913-00\\microsoft.net.native.compiler.2.2.7-rel-27913-00.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.uwpcoreruntimesdk\\2.2.9\\microsoft.net.uwpcoreruntimesdk.2.2.9.nupkg.sha512",
