@@ -1931,7 +1931,7 @@ namespace UWP_Tetris
         public bool UpdateDown()
         {
             movingDown++;
-            if (movingDown % 1 == 0)
+            if (movingDown % 10 == 0)
             {
                 if (CurrentPieceMade == 0)
                 {

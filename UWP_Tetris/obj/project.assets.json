@@ -8322,11 +8322,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\malka\\Desktop\\UWP_Tetris\\UWP_Tetris.csproj",
+      "projectUniqueName": "C:\\Users\\malka\\Documents\\GitHub\\Tetris\\UWP_Tetris\\UWP_Tetris.csproj",
       "projectName": "UWP_Tetris",
-      "projectPath": "C:\\Users\\malka\\Desktop\\UWP_Tetris\\UWP_Tetris.csproj",
+      "projectPath": "C:\\Users\\malka\\Documents\\GitHub\\Tetris\\UWP_Tetris\\UWP_Tetris.csproj",
       "packagesPath": "C:\\Users\\malka\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\malka\\Desktop\\UWP_Tetris\\obj\\",
+      "outputPath": "C:\\Users\\malka\\Documents\\GitHub\\Tetris\\UWP_Tetris\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
