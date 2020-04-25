@@ -73,7 +73,7 @@ namespace UWP_Tetris
             if (tetris.getGameOver() && args.VirtualKey == Windows.System.VirtualKey.X)
             {
                 player.Pause();
-                Frame.Navigate(typeof(credits));
+                Frame.Navigate(typeof(titlepage));
             }
         }
 
@@ -82,10 +82,6 @@ namespace UWP_Tetris
             if (!tetris.getGameOver())
             {
                 tetris.setPiece();
-            }
-            else
-            {
-                Frame.Navigate(typeof(titlepage));
             }
         }
 
